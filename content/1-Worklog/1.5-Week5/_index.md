@@ -1,57 +1,39 @@
 ---
-title: "Week 5 Worklog"
-date: 2024-01-01
-weight: 1
+title: "Worklog Week 5"
+date: 2026-05-18
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 5 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Research and deploy centralized identity management, secure permission boundaries, and evaluate security compliance benchmarks within cloud infrastructures.
+* Establish comprehensive edge-layer application protection profiles and orchestrate the lifecycle management of cryptographic encryption keys.
+* Construct large-scale flat network routing topologies and configure automated multi-service backup recovery matrices to optimize overall system reliability.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+### Tasks to be Deployed This Week:
+
+| Day | Task | Start Date | End Date | Resource Links |
+| --- | --- | --- | --- | --- |
+| 2 | - Research centralized multi-account access control models using single sign-on architectures via amazon sso inside aws organizations <br> - **Practice:** Establish and implement an iam permission boundary configuration to strictly enforce maximum privilege ceilings for user identities | 18/05/2026 | 18/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - Study methods to restrict role delegation vectors through policy condition structures (limiting role transfer by condition) <br> - **Practice:** Activate and configure the aws security hub posture center to automate threat scanning against international security benchmarks | 19/05/2026 | 19/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - Investigate mitigation vectors against common web-layer application exploits and malicious api request flows using the web application firewall aws waf <br> - **Practice:** Initialize the centralized cryptographic key management service aws kms to execute secure key generation, storage, and data protection cycles | 20/05/2026 | 20/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - Formulate automated data lifecycle protection rules and centralized multi-service snapshot backup routines across core platform data layers using aws backup <br> - **Practice:** Configure direct localized peering connections between isolated private virtual networks using vpc peering | 21/05/2026 | 22/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - Analyze large-scale enterprise network topologies designed to eliminate cross-connected mesh routing overhead through centralized hub-and-spoke models <br> - **Practice:** Deploy and orchestrate multi-vpc packet routing streams through a centralized cloud routing engine using aws transit gateway | 22/05/2026 | 23/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+
+---
 
 ### Week 5 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Successfully configured and deployed the centralized identity lifecycle center amazon sso, streamlining single sign-on access parameters across multi-account structures while preserving rigorous security postures.
+* Mastered the design mechanics of iam permission boundary criteria, creating absolute safety boundaries that neutralize credential abuse or unauthorized local privilege escalation attempts from lower-tier operators.
+* Applied policy condition logic within access control configurations to strictly oversee role transfer transactions, eliminating unauthorized role delegation vectors.
+* Fully operationalized the cloud security posture platform aws security hub, extracting automated configuration flaw findings and mapping existing system boundaries directly to standard industry benchmarks.
+* Designed and enforced proactive web traffic screening profiles via aws waf rulesets, blocking malicious web-layer application attacks and shielding exposed api gateway backends from exploit attempts.
+* Implemented the cryptographic system aws kms, configuring automated key rotation workflows to seamlessly encrypt and insulate all underlying persistent data storage components.
+* Established an enterprise-grade automated backup infrastructure using aws backup, ensuring production-tier data environments are systematically snapshot-vaulted to fulfill low recovery point objectives.
+* Validated low-latency, highly secure internal node packet routing paths across isolated environments via structural vpc peering configuration tunnels.
+* Engineered a centralized flat-network topology using aws transit gateway, consolidating separate cross-environment vpc interfaces into a single scalable transit core, significantly simplifying enterprise multi-region networking scale.

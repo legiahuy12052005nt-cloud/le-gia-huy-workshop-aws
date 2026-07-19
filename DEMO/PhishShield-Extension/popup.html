@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { width: 240px; padding: 15px; font-family: sans-serif; background: #121212; color: #ffffff; margin: 0; }
+        .header { font-size: 14px; font-weight: bold; color: #00ffcc; border-bottom: 1px solid #333; padding-bottom: 8px; margin-bottom: 10px; text-align: center; }
+        .stat-box { background: #1e1e1e; padding: 12px; border-radius: 6px; text-align: center; box-shadow: inset 0 0 5px rgba(0,0,0,0.5); }
+        .counter { font-size: 28px; font-weight: bold; color: #ff3366; margin: 5px 0; }
+        .footer { font-size: 10px; color: #888; text-align: center; margin-top: 12px; }
+    </style>
+</head>
+<body>
+    <div class="header">ILOVEAWS • PHISHSHIELD</div>
+    <div class="stat-box">
+        <div style="font-size: 11px; color: #aaa;">Active Threat Blocked</div>
+        <div class="counter" id="totalBlocks">0</div>
+    </div>
+    <div class="footer">Protection Core Active v1.1.0</div>
+    <script>
+        chrome.storage.local.get({ blockCount: 0 }, (data) => {
+            document.getElementById('totalBlocks').textContent = data.blockCount;
+        });
+    </script>
+</body>
+</html>

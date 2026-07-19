@@ -19,22 +19,33 @@
   }
 </style>
 <div class="ghContributors">
-  {{ $url := .Get 0 }} {{ range getJSON $url }}
-  <div>
-    <img
-      src="{{.avatar_url}}"
-      class="inline"
-      width="32"
-      height="32"
-      style="
-        height: 32px;
-        height: 32px;
-        margin-bottom: 0.25em;
-        vertical-align: middle;
-      "
-    />
-    <label><a href="{{.html_url}}">@{{.login}}</a></label>
-    <span class="contributions">{{.contributions}} commits</span>
-  </div>
+  {{ $url := .Get 0 }}
+  
+  /* Lấy dữ liệu từ GitHub API theo chuẩn Hugo đời mới */
+  {{ $res := resources.GetRemote $url }}
+  
+  {{ if $res }}
+    {{ $contributors := $res.Content | transform.Unmarshal }}
+    
+    {{ range $contributors }}
+    <div>
+      <img
+        src="{{.avatar_url}}"
+        class="inline"
+        width="32"
+        height="32"
+        style="
+          height: 32px;
+          margin-bottom: 0.25em;
+          vertical-align: middle;
+        "
+      />
+      <label><a href="{{.html_url}}">@{{.login}}</a></label>
+      <span class="contributions">{{.contributions}} commits</span>
+    </div>
+    {{ end }}
+    
+  {{ else }}
+    <p style="font-size: x-small; color: red;">⚠️ Không thể kết nối tới GitHub API</p>
   {{ end }}
 </div>

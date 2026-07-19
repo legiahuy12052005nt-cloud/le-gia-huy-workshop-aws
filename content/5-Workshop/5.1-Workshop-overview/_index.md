@@ -1,18 +1,18 @@
 ---
-title : "Introduction"
-date : 2024-01-01 
-weight : 1 
-chapter : false
-pre : " <b> 5.1. </b> "
+title: "Introduction"
+date: 2026-07-05
+weight: 1
+chapter: false
+pre: " <b> 5.1 </b> "
 ---
 
-#### VPC endpoints
-+ **VPC endpoints** are virtual devices. They are horizontally scaled, redundant, and highly available VPC components. They allow communication between your compute resources and AWS services without imposing availability risks.
-+ Compute resources running in VPC can access  **Amazon S3**  using a Gateway endpoint. PrivateLink interface endpoints can be used by compute resources running in VPC or on-premises.
+#### Introduction to phishshield ecosystem
 
-#### Workshop overview
-In this workshop, you will use two VPCs. 
-+ **"VPC Cloud"** is for cloud resources such as a  **Gateway endpoint** and an EC2 instance to test with. 
-+ **"VPC On-Prem"** simulates an on-premises environment such as a factory or corporate datacenter. An EC2 instance running strongSwan VPN software has been deployed in "VPC On-prem" and automatically configured to establish a Site-to-Site VPN tunnel with AWS Transit Gateway. This VPN simulates connectivity from an on-premises location to the AWS cloud. To minimize costs, only one VPN instance is provisioned to support this workshop. When planning VPN connectivity for your production workloads, AWS recommends using multiple VPN devices for high availability.
++ The phishshield ecosystem is a multi-layered cybersecurity solution developed by our team to proactively detect, block, and isolate phishing links as well as account-stealing malware right from the user's browser and device side (client edge).
++ The system breaks the cyber attack chain by combining a real-time fast blocking filter with an asynchronous deep analysis subsystem utilizing generative AI, providing comprehensive protection for users.
 
-![overview](/images/5-Workshop/5.1-Workshop-overview/diagram1.png)
+#### Workshop Overview
+
+In this hands-on workshop, we will step-by-step implement and deploy this entire system onto the cloud environment through key components:
++ client edge side: Configure and install the chrome extension to redirect malicious links in the browser, combined with a discord bot to automatically clean up trap links on social media chat channels.
++ cloud infrastructure side: Use the aws sam packaging tool to automatically initialize a pure serverless model consisting of an api gateway ingestion portal equipped with an aws waf firewall, an amazon sqs message queue as an anti-congestion buffer, aws lambda functions for processing logic, an amazon dynamodb database for quick blacklist lookups, and an amazon s3 storage as a threat intel data lake integrated with the smart contextual analysis of amazon bedrock guardrails.

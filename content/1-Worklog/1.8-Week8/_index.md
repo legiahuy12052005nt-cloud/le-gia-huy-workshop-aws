@@ -1,57 +1,35 @@
 ---
-title: "Week 8 Worklog"
-date: 2024-01-01
-weight: 1
+title: "Worklog Week 8"
+date: 2026-06-08
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 8 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Initialize the isolated cloud network infrastructure foundation and establish baseline access security rules.
+* Build the high-speed database component to serve real-time blacklist storage and rapid querying capabilities.
+* Develop serverless processing functions and deploy api communication gateways to receive telemetry data from edge applications.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+### Tasks to be Deployed This Week:
+
+| Day | Task | Start Date | End Date | Resource Links |
+| --- | --- | --- | --- | --- |
+| 2 | - Deploy and initialize the core amazon vpc virtual network environment for the system <br> - Configure network segmentation into public subnet and private subnet zones, establishing internet gateway and nat gateway components to route network traffic securely | 08/06/2026 | 08/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - Design an optimal key-value data structure (schema) to accommodate high-speed query operations <br> - Provision a data table on amazon dynamodb to store the blacklist repository of malicious links, setting up automatic expiration mechanisms for stale records | 09/06/2026 | 09/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - Program serverless execution functions using aws lambda to implement the logic of extracting links from payloads and cross-referencing them against the database <br> - Establish iam role permission policies authorizing the lambda function to read data securely from amazon dynamodb | 10/06/2026 | 10/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - Deploy the edge communication layer using amazon api gateway as the endpoint to receive inbound rest api requests <br> - Integrate the api gateway router to trigger the corresponding aws lambda processing function at the backend | 11/06/2026 | 11/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - Conduct end-to-end integration testing of the real-time data flow using request simulation tools like postman <br> - Measure latency, append exception handling blocks (try-catch), and configure system monitoring log pushes to amazon cloudwatch | 12/06/2026 | 12/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+
+---
 
 ### Week 8 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Successfully built a robust cloud network infrastructure foundation with amazon vpc, clearly separating public access flows and private secure zones, ensuring core storage services are not directly exposed to the internet.
+* Successfully initialized nosql storage space on the amazon dynamodb platform, optimizing partition key configurations to achieve link status lookup speeds of just a few milliseconds, perfectly meeting real-time processing requirements.
+* Completed the logic source code for the instant link verification cluster; compiled and deployed the aws lambda function to operate stably and smoothly interact with the datastore through strictly limited iam role privileges.
+* Successfully routed external command invocation flows through the amazon api gateway network, creating secure url endpoints ready for integration with browser extensions and social network bots.
+* Evaluated and validated that the real-time processing flow operates exactly as initially designed; the system records and classifies errors effectively, while the entire query history is centrally managed and strictly monitored through the amazon cloudwatch interface.

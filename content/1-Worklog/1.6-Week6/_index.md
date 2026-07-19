@@ -1,57 +1,39 @@
 ---
-title: "Week 6 Worklog"
-date: 2024-01-01
-weight: 1
+title: "Worklog Week 6"
+date: 2026-05-25
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 6 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Research application architecture transformation frameworks from monolithic structures to decentralized microservices combined with structural data workflow refactoring.
+* Construct event-driven serverless system abstractions, implement centralized identity provider authentication, and enforce edge-layer ssl security controls.
+* Leverage asynchronous messaging queues, event notification fan-outs to orchestrate complex transaction pipelines, and automate structural code packaging cycles.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+### Tasks to be Deployed This Week:
+
+| Day | Task | Start Date | End Date | Resource Links |
+| --- | --- | --- | --- | --- |
+| 2 | - Study structural patterns to decouple enterprise software blocks through targeted application migrate monolith to microservices routines <br> - Perform data and workflow restructuring strategies to isolate operational domains | 25/05/2026 | 25/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - Analyze operational flows required to create and authenticate single page application interfaces securely <br> - **Practice:** Integrate centralized user authentication directories using amazon cognito and execute secure setting up ssl for your serverless app workflows | 26/05/2026 | 26/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - Investigate serverless backend interaction paradigms combining computing routines via aws lambda with object stores like amazon s3 and nosql databases like amazon dynamodb <br> - **Practice:** Construct a responsive frontend workspace to dispatch backend execution routines by calling api gateway entry points | 27/05/2026 | 27/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - Examine multi-service decoupled communication standards utilizing microservices messaging and eventing methodologies <br> - **Practice:** Implement an automated order validation loop by combining amazon sqs message queues, amazon sns event alerts, and orchestrating execution pathways with aws step functions | 28/05/2026 | 28/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - Explore continuous continuous integration and deployment pipelines geared towards auto-release apps paradigms <br> - **Practice:** Leverage the aws sam infrastructure framework to pack and deploy serverless assets while conducting functional validation rounds on advanced ai services on aws | 29/05/2026 | 29/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+
+---
 
 ### Week 6 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Mastered structural decoupling principles, successfully analyzing application decomposition strategies to slice legacy monolith systems into flexible microservices modules without impacting core business runtime operations.
+* Architected a secure single page application wrapper integrated with centralized customer identity lookup directories and multi-factor authorization profiles powered by amazon cognito.
+* Enforced end-to-end transport-layer protection rules by completing standard setting up ssl for your serverless app configurations, completely safeguarding client edge operations from manipulation.
+* Developed high-throughput serverless micro-backends, programming custom logical units on aws lambda to store objects inside amazon s3 and process operational state changes inside amazon dynamodb tables.
+* Implemented unified API endpoints on api gateway, providing a secure bridge to route external web requests directly down to backend computing services.
+* Built a highly decoupled, asynchronous communication layer across application boundaries, using amazon sqs to buffer transactional bursts and amazon sns to execute instantaneous event fan-outs.
+* Designed and executed scalable state machine configurations inside aws step functions, visually orchestrating multi-tier transaction tasks with automated retry states and fallback mechanisms.
+* Streamlined the deployment lifecycle of the entire software layout to achieve auto-release apps goals by orchestrating template build and launch scripts through the declarative aws sam framework.
+* Gained practical experience interacting with pre-trained machine learning capabilities and ai services on aws, evaluating integration interfaces to inject intelligence vectors directly into our ecosystem endpoints.

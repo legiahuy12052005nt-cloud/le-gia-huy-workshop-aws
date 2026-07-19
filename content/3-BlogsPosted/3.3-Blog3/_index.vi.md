@@ -1,31 +1,40 @@
 ---
-title: "Blog 3"
-date: 2024-01-01
-weight: 1
+title: "Blog 3: AWS MCP Server"
+date: 2026-06-25
+weight: 3
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-# SESSION POLICIES TRONG AMAZON EKS POD IDENTITY
+# AWS MCP Server: Kỷ nguyên mới khi AI Agent tự động hóa và quản trị hệ thống Cloud
 
-Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+Chào mọi người trong AWS Study Group.
 
-Các điểm chính cần nắm:
+Trong vài tháng trở lại đây, thế giới công nghệ đang chứng kiến sự bùng nổ mạnh mẽ của khái niệm AI Agent (Cơ chế AI tự vận hành và thực thi tác vụ) thay vì chỉ dừng lại ở các chatbot hỏi - đáp thông thường. Một trong những rào cản lớn nhất của AI Agent từ trước đến nay là làm sao kết nối mô hình trí tuệ nhân tạo với hệ thống hạ tầng thực tế một cách an toàn.
 
-* Session policy là một IAM policy inline được chỉ định khi tạo hoặc cập nhật Pod Identity association.
-* Quyền hiệu quả = intersection (giao) giữa permissions của IAM role và session policy → session policy chỉ có thể thu hẹp, không thể mở rộng quyền.
-* Giúp tránh tình trạng over-permissioning khi reuse chung một IAM role cho nhiều workloads có nhu cầu khác nhau.
-* Hỗ trợ cả same-account và cross-account (qua IAM role chaining).
-* Giảm đáng kể số lượng IAM roles cần quản lý, tránh chạm giới hạn quota IAM trong cluster lớn.
-* Cấu hình dễ dàng qua AWS Management Console, AWS CLI hoặc AWS SDK khi tạo association giữa Kubernetes ServiceAccount và IAM role.
+Để giải quyết bài toán cốt lõi này, vào tháng 5/2026, AWS đã chính thức cho ra mắt bản AWS MCP Server (Model Context Protocol). Đây được xem là một trong những công nghệ mới và đáng chú ý nhất hiện nay dành cho các kỹ sư Cloud và DevSecOps.
 
-Tính năng này đặc biệt hữu ích khi bạn có nhiều ứng dụng chạy trên cùng một IAM role nhưng cần giới hạn quyền khác nhau (ví dụ: một pod chỉ đọc S3 bucket cụ thể, pod khác chỉ gọi một số API nhất định).
+### Model Context Protocol (MCP) là gì?
+Để hiểu về dịch vụ mới của AWS, trước hết chúng ta cần biết MCP là gì. Model Context Protocol (MCP) là một giao thức mã nguồn mở tiêu chuẩn, đóng vai trò như một "đường ống dẫn dòng ngữ cảnh" giữa các mô hình ngôn ngữ lớn (LLM) và các nguồn dữ liệu hoặc công cụ bên ngoài (như môi trường phát triển ứng dụng, máy chủ tệp tin).
 
-...Hình ảnh...
+Trước khi có MCP, mỗi khi muốn AI đọc dữ liệu hạ tầng, chúng ta phải tự viết các đoạn script kết nối tùy biến rất thủ công và rời rạc. MCP ra đời để chuẩn hóa toàn bộ luồng giao tiếp này.
 
-...Link...
+### AWS MCP Server giải quyết bài toán gì?
+AWS MCP Server là một máy chủ Model Context Protocol từ xa được quản lý hoàn phần bởi AWS. Dịch vụ này nằm trong bộ công cụ Agent Toolkit for AWS, mang lại khả năng kết nối bảo mật, có xác thực rõ ràng cho các AI Agent và các trợ lý lập trình (coding assistants) truy cập thẳng vào các dịch vụ của AWS.
 
-...Hướng dẫn...
+Thay vì mọi người phải copy-paste các thông số hạ tầng hay cấp quyền một cách lỏng lẻo cho các AI bên thứ ba, AWS MCP Server đóng vai trò như một người gác cổng an ninh tin cậy.
+
+### Những điểm cốt lõi của công nghệ mới này
+
+* **Giao tiếp an toàn và có kiểm soát:** AWS MCP Server tích hợp chặt chẽ với cơ chế quản lý định danh của AWS, đảm bảo rằng AI Agent chỉ được phép xem hoặc thao tác trên những tài nguyên hạ tầng cụ thể mà mọi người cho phép, loại bỏ hoàn toàn rủi ro rò rỉ mã bảo mật.
+* **Tối ưu hóa năng suất lập trình:** Khi tích hợp với các môi trường phát triển hiện đại, AI Agent có thể tự động hiểu được ngữ cảnh kiến trúc hiện tại của hệ thống AWS mà doanh nghiệp đang chạy, từ đó đưa ra các đề xuất sửa lỗi hoặc tối ưu hóa mã nguồn chính xác hơn rất nhiều.
+* **Nằm trong hệ sinh thái Agent chuyên sâu:** Là một phần của Agent Toolkit for AWS, dịch vụ này mở ra tiềm năng lớn để xây dựng các kỹ năng (skills) và plugin tự động hóa, giúp các AI Agent phối hợp với nhau xử lý các tác vụ quản trị hệ thống phức tạp thay con người trong tương lai.
+
+### Tổng kết
+Sự xuất hiện của AWS MCP Server cho thấy AWS đang chuẩn bị rất kỹ lưỡng cho một tương lai nơi các kỹ sư hệ thống sẽ làm việc song hành cùng các AI Agent để vận hành các kiến trúc Cloud lớn. Đây chắc chắn là một công nghệ rất đáng để mọi người trải nghiệm và nghiên cứu ngay từ thời điểm này.
+
+---
+
+### Nguồn tham khảo
+* https://aws.amazon.com/vi/blogs/machine-learning/extend-large-language-models-powered-by-amazon-sagemaker-ai-using-model-context-protocol/
+![Sơ đồ minh họa](/images/blog3.png)

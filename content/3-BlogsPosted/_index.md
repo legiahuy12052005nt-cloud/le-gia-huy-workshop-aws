@@ -1,22 +1,18 @@
 ---
 title: "Blogs Posted"
-date: 2024-01-01
+date: 2026-07-05
 weight: 3
 chapter: false
 pre: " <b> 3. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+> This section aggregates and categorizes the technical deep-dive blogs published and discussed within the [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj) community, focusing on cloud perimeter defense, serverless security compliance, and AI/ML-driven automated infrastructure operations.
 
-This section will list and introduce the blogs you have posted to [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj). For example:
+### [Blog 1 - Amazon Bedrock Guardrails: A Secure Firewall for LLM Applications](1/)
+This blog explores **Amazon Bedrock Guardrails**, an enterprise-grade, bidirectional security gateway. It breaks down how Guardrails proactively enforces continuous discovery and mitigation matrices across both Input and Output data streams, effectively neutralizing adversarial prompt injection attempts and safeguarding Personally Identifiable Information (PII) within Generative AI pipelines.
 
-###  [Blog 1 - SESSION POLICIES IN AMAZON EKS POD IDENTITY](3.1-Blog1/)
-This blog introduces the newly added session policies feature in Amazon EKS Pod Identity, which allows you to narrow IAM permissions flexibly and precisely for each pod without needing to create multiple separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+### [Blog 2 - Amazon GuardDuty: AI-Powered Intelligent Threat Detection 24/7](2/)
+This blog introduces **Amazon GuardDuty**, an intelligent, agentless threat detection service operating seamlessly at the AWS infrastructure layer. The content highlights how GuardDuty leverages advanced Machine Learning models to analyze core telemetry telemetry (AWS CloudTrail, VPC Flow Logs, DNS Logs), enabling real-time detection of brute-force anomalies, credential compromises, and ransomware signatures with zero operational overhead.
 
-###  [Blog 2 - ...](3.2-Blog2/)
-This blog introduces the newly added session policies feature in Amazon EKS Pod Identity, which allows you to narrow IAM permissions flexibly and precisely for each pod without needing to create multiple separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
-
-###  [Blog 3 - ...](3.3-Blog3/)
-This blog introduces the newly added session policies feature in Amazon EKS Pod Identity, which allows you to narrow IAM permissions flexibly and precisely for each pod without needing to create multiple separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+### [Blog 3 - AWS MCP Server: Empowering Autonomous AI Agents in Cloud Administration](3/)
+This blog examines a cutting-edge technical milestone – the **AWS MCP Server (Model Context Protocol)** released in May 2026. It elucidates how the open-source MCP protocol standardizes context pipelines, establishing secure, tightly authenticated boundaries for autonomous AI Agents to interact with and automate complex cloud infrastructure provisioning and configuration tasks.

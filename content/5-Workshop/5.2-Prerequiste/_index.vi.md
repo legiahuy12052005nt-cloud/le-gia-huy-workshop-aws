@@ -1,242 +1,32 @@
 ---
-title : "Các bước chuẩn bị"
-date : 2024-01-01 
-weight : 2
-chapter : false
-pre : " <b> 5.2. </b> "
+title: "Kiến trúc giải pháp"
+date: 2026-07-05
+weight: 3
+chapter: false
+pre: " <b> 5.2. </b> "
 ---
 
-#### IAM permissions
-Gắn IAM permission policy sau vào tài khoản aws user của bạn để triển khai và dọn dẹp tài nguyên trong workshop này.
-```
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "VisualEditor0",
-            "Effect": "Allow",
-            "Action": [
-                "cloudformation:*",
-                "cloudwatch:*",
-                "ec2:AcceptTransitGatewayPeeringAttachment",
-                "ec2:AcceptTransitGatewayVpcAttachment",
-                "ec2:AllocateAddress",
-                "ec2:AssociateAddress",
-                "ec2:AssociateIamInstanceProfile",
-                "ec2:AssociateRouteTable",
-                "ec2:AssociateSubnetCidrBlock",
-                "ec2:AssociateTransitGatewayRouteTable",
-                "ec2:AssociateVpcCidrBlock",
-                "ec2:AttachInternetGateway",
-                "ec2:AttachNetworkInterface",
-                "ec2:AttachVolume",
-                "ec2:AttachVpnGateway",
-                "ec2:AuthorizeSecurityGroupEgress",
-                "ec2:AuthorizeSecurityGroupIngress",
-                "ec2:CreateClientVpnEndpoint",
-                "ec2:CreateClientVpnRoute",
-                "ec2:CreateCustomerGateway",
-                "ec2:CreateDhcpOptions",
-                "ec2:CreateFlowLogs",
-                "ec2:CreateInternetGateway",
-                "ec2:CreateLaunchTemplate",
-                "ec2:CreateNetworkAcl",
-                "ec2:CreateNetworkInterface",
-                "ec2:CreateNetworkInterfacePermission",
-                "ec2:CreateRoute",
-                "ec2:CreateRouteTable",
-                "ec2:CreateSecurityGroup",
-                "ec2:CreateSubnet",
-                "ec2:CreateSubnetCidrReservation",
-                "ec2:CreateTags",
-                "ec2:CreateTransitGateway",
-                "ec2:CreateTransitGatewayPeeringAttachment",
-                "ec2:CreateTransitGatewayPrefixListReference",
-                "ec2:CreateTransitGatewayRoute",
-                "ec2:CreateTransitGatewayRouteTable",
-                "ec2:CreateTransitGatewayVpcAttachment",
-                "ec2:CreateVpc",
-                "ec2:CreateVpcEndpoint",
-                "ec2:CreateVpcEndpointConnectionNotification",
-                "ec2:CreateVpcEndpointServiceConfiguration",
-                "ec2:CreateVpnConnection",
-                "ec2:CreateVpnConnectionRoute",
-                "ec2:CreateVpnGateway",
-                "ec2:DeleteCustomerGateway",
-                "ec2:DeleteFlowLogs",
-                "ec2:DeleteInternetGateway",
-                "ec2:DeleteNetworkInterface",
-                "ec2:DeleteNetworkInterfacePermission",
-                "ec2:DeleteRoute",
-                "ec2:DeleteRouteTable",
-                "ec2:DeleteSecurityGroup",
-                "ec2:DeleteSubnet",
-                "ec2:DeleteSubnetCidrReservation",
-                "ec2:DeleteTags",
-                "ec2:DeleteTransitGateway",
-                "ec2:DeleteTransitGatewayPeeringAttachment",
-                "ec2:DeleteTransitGatewayPrefixListReference",
-                "ec2:DeleteTransitGatewayRoute",
-                "ec2:DeleteTransitGatewayRouteTable",
-                "ec2:DeleteTransitGatewayVpcAttachment",
-                "ec2:DeleteVpc",
-                "ec2:DeleteVpcEndpoints",
-                "ec2:DeleteVpcEndpointServiceConfigurations",
-                "ec2:DeleteVpnConnection",
-                "ec2:DeleteVpnConnectionRoute",
-                "ec2:Describe*",
-                "ec2:DetachInternetGateway",
-                "ec2:DisassociateAddress",
-                "ec2:DisassociateRouteTable",
-                "ec2:GetLaunchTemplateData",
-                "ec2:GetTransitGatewayAttachmentPropagations",
-                "ec2:ModifyInstanceAttribute",
-                "ec2:ModifySecurityGroupRules",
-                "ec2:ModifyTransitGatewayVpcAttachment",
-                "ec2:ModifyVpcAttribute",
-                "ec2:ModifyVpcEndpoint",
-                "ec2:ReleaseAddress",
-                "ec2:ReplaceRoute",
-                "ec2:RevokeSecurityGroupEgress",
-                "ec2:RevokeSecurityGroupIngress",
-                "ec2:RunInstances",
-                "ec2:StartInstances",
-                "ec2:StopInstances",
-                "ec2:UpdateSecurityGroupRuleDescriptionsEgress",
-                "ec2:UpdateSecurityGroupRuleDescriptionsIngress",
-                "iam:AddRoleToInstanceProfile",
-                "iam:AttachRolePolicy",
-                "iam:CreateInstanceProfile",
-                "iam:CreatePolicy",
-                "iam:CreateRole",
-                "iam:DeleteInstanceProfile",
-                "iam:DeletePolicy",
-                "iam:DeleteRole",
-                "iam:DeleteRolePolicy",
-                "iam:DetachRolePolicy",
-                "iam:GetInstanceProfile",
-                "iam:GetPolicy",
-                "iam:GetRole",
-                "iam:GetRolePolicy",
-                "iam:ListPolicyVersions",
-                "iam:ListRoles",
-                "iam:PassRole",
-                "iam:PutRolePolicy",
-                "iam:RemoveRoleFromInstanceProfile",
-                "lambda:CreateFunction",
-                "lambda:DeleteFunction",
-                "lambda:DeleteLayerVersion",
-                "lambda:GetFunction",
-                "lambda:GetLayerVersion",
-                "lambda:InvokeFunction",
-                "lambda:PublishLayerVersion",
-                "logs:CreateLogGroup",
-                "logs:DeleteLogGroup",
-                "logs:DescribeLogGroups",
-                "logs:PutRetentionPolicy",
-                "route53:ChangeTagsForResource",
-                "route53:CreateHealthCheck",
-                "route53:CreateHostedZone",
-                "route53:CreateTrafficPolicy",
-                "route53:DeleteHostedZone",
-                "route53:DisassociateVPCFromHostedZone",
-                "route53:GetHostedZone",
-                "route53:ListHostedZones",
-                "route53domains:ListDomains",
-                "route53domains:ListOperations",
-                "route53domains:ListTagsForDomain",
-                "route53resolver:AssociateResolverEndpointIpAddress",
-                "route53resolver:AssociateResolverRule",
-                "route53resolver:CreateResolverEndpoint",
-                "route53resolver:CreateResolverRule",
-                "route53resolver:DeleteResolverEndpoint",
-                "route53resolver:DeleteResolverRule",
-                "route53resolver:DisassociateResolverEndpointIpAddress",
-                "route53resolver:DisassociateResolverRule",
-                "route53resolver:GetResolverEndpoint",
-                "route53resolver:GetResolverRule",
-                "route53resolver:ListResolverEndpointIpAddresses",
-                "route53resolver:ListResolverEndpoints",
-                "route53resolver:ListResolverRuleAssociations",
-                "route53resolver:ListResolverRules",
-                "route53resolver:ListTagsForResource",
-                "route53resolver:UpdateResolverEndpoint",
-                "route53resolver:UpdateResolverRule",
-                "s3:AbortMultipartUpload",
-                "s3:CreateBucket",
-                "s3:DeleteBucket",
-                "s3:DeleteObject",
-                "s3:GetAccountPublicAccessBlock",
-                "s3:GetBucketAcl",
-                "s3:GetBucketOwnershipControls",
-                "s3:GetBucketPolicy",
-                "s3:GetBucketPolicyStatus",
-                "s3:GetBucketPublicAccessBlock",
-                "s3:GetObject",
-                "s3:GetObjectVersion",
-                "s3:GetBucketVersioning",
-                "s3:ListAccessPoints",
-                "s3:ListAccessPointsForObjectLambda",
-                "s3:ListAllMyBuckets",
-                "s3:ListBucket",
-                "s3:ListBucketMultipartUploads",
-                "s3:ListBucketVersions",
-                "s3:ListJobs",
-                "s3:ListMultipartUploadParts",
-                "s3:ListMultiRegionAccessPoints",
-                "s3:ListStorageLensConfigurations",
-                "s3:PutAccountPublicAccessBlock",
-                "s3:PutBucketAcl",
-                "s3:PutBucketPolicy",
-                "s3:PutBucketPublicAccessBlock",
-                "s3:PutObject",
-                "secretsmanager:CreateSecret",
-                "secretsmanager:DeleteSecret",
-                "secretsmanager:DescribeSecret",
-                "secretsmanager:GetSecretValue",
-                "secretsmanager:ListSecrets",
-                "secretsmanager:ListSecretVersionIds",
-                "secretsmanager:PutResourcePolicy",
-                "secretsmanager:TagResource",
-                "secretsmanager:UpdateSecret",
-                "sns:ListTopics",
-                "ssm:DescribeInstanceProperties",
-                "ssm:DescribeSessions",
-                "ssm:GetConnectionStatus",
-                "ssm:GetParameters",
-                "ssm:ListAssociations",
-                "ssm:ResumeSession",
-                "ssm:StartSession",
-                "ssm:TerminateSession"
-            ],
-            "Resource": "*"
-        }
-    ]
-}
+Hệ thống áp dụng mô hình phân tách trách nhiệm linh hoạt và toàn diện giữa tầng biên client edge (đánh chặn, cách ly và thu thập dữ liệu cấu trúc chủ động) và tầng xử lý trung tâm cloud backend (định tuyến tốc độ cao, xử lý phân tán đa vùng sẵn sàng, lưu trữ bền vững và phân tích mô hình trí tuệ nhân tạo chuyên sâu).
 
-```
+![Sơ đồ kiến trúc PhishShield Ecosystem](/images/2-Proposal/diagram.jpg)
 
-#### Khởi tạo tài nguyên bằng CloudFormation
+#### Các dịch vụ hạ tầng thuộc nền tảng đám mây sử dụng
 
-Trong lab này, chúng ta sẽ dùng N.Virginia region (us-east-1).
+* aws waf: Tường lửa ứng dụng web đóng vai trò lọc kịch bản tấn công nguy hiểm, bảo vệ toàn vẹn các điểm kết nối biên trước luồng dữ liệu độc hại.
+* amazon api gateway: Điểm tiếp nhận trung tâm cổng kết nối, thu thập siêu dữ liệu url và log an ninh từ client edge endpoint chuyển tiếp qua giao thức bảo mật https.
+* aws lambda: Triển khai kiến trúc serverless linh hoạt với hàm điều phối định tuyến phân tích nhanh (lambda url evaluation router) và hàm xử lý hậu trường bất đồng bộ.
+* amazon dynamodb: Cơ sở dữ liệu nosql cấu hình lớp lưu trữ bộ đệm tốc độ cao (high-speed cache), phản hồi trực tiếp kết quả định danh danh sách đen để đáp ứng mục tiêu kpi độ trễ cực thấp.
+* application load balancer: Bộ cân bằng tải ứng dụng thông minh chịu trách nhiệm điều phối dòng dữ liệu kết nối đồng đều đến các cụm máy chủ xử lý lớp trong.
+* amazon ec2: Cụm máy chủ ảo hóa xử lý logic nghiệp vụ api phân tán chuyên sâu, được cấu hình tự động mở rộng và triển khai đa vùng sẵn sàng (multi-az) bên trong các phân vùng mạng public subnet bảo mật.
+* cơ sở dữ liệu liên kết (db): Phân hệ lưu trữ dữ liệu có cấu trúc quan hệ, được cô lập an toàn trong các vùng mạng private subnet riêng biệt để phòng chống các nguy cơ khai thác thông tin trực diện.
+* amazon s3: Vùng tài nguyên data lake lưu trữ cấu trúc tệp dữ liệu nhật ký định dạng json phục vụ mục đích giám sát lâu dài, đồng thời kết hợp làm kho chứa tài nguyên nội dung phân phối tĩnh.
+* amazon bedrock: Nền tảng tích hợp trí tuệ nhân tạo thế hệ mới, gọi các mô hình nền tảng tiên tiến để thực thi tác vụ phân tích sâu bất đồng bộ (asynchronous deep analysis) kịch bản lừa đảo nâng cao.
+* amazon cloudfront: Mạng lưới phân phối nội dung (content distribution) toàn cầu giúp tối ưu hóa bộ nhớ đệm và tăng tốc truyền tải dữ liệu đến thiết bị đầu cuối.
+* phân hệ an ninh và quản trị hệ thống chéo (cross-cutting security & governance): Tích hợp đồng bộ các giải pháp quản lý khóa mã hóa vật lý aws kms, phân cấp đặc quyền tối thiểu aws iam, quản trị chuỗi mật mã bí mật aws secrets manager, tối ưu hóa hạn mức tài chính aws budgets, giám sát tài nguyên thời gian thực amazon cloudwatch và tự động hóa triển khai hạ tầng bằng mã lệnh aws cloudformation.
 
-Để chuẩn bị cho môi trường làm workshop, chúng ta deploy CloudFormation template sau (click link): [PrivateLinkWorkshop ](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https://s3.us-east-1.amazonaws.com/reinvent-endpoints-builders-session/Nested.yaml&stackName=PLCloudSetup). Để nguyên các lựa chọn mặc định.
+---
 
-![create stack](/images/5-Workshop/5.2-Prerequisite/create-stack1.png)
+#### Thiết kế chi tiết các cấu phần hệ thống
 
-+ Lựa chọn 2 mục acknowledgement 
-+ Chọn Create stack
-
-![create stack](/images/5-Workshop/5.2-Prerequisite/create-stack2.png)
-
-Quá trình triển khai CloudFormation cần khoảng 15 phút để hoàn thành.
-
-![complete](/images/5-Workshop/5.2-Prerequisite/complete.png)
-
-+ 2 VPCs đã được tạo
-
-![vpcs](/images/5-Workshop/5.2-Prerequisite/vpcs.png)
-
-+ 3 EC2s đã được tạo
-
-![EC2](/images/5-Workshop/5.2-Prerequisite/ec2.png)
+* browser extension (manifest v3): Đóng vai trò lớp phòng thủ chủ động trực tiếp trên trình duyệt lõi chromium của người dùng, ứng dụng tiến trình service worker chạy ngầm background.js để tuần tra lưu lượng kết nối thời gian thực và thực thi lệnh bẻ lái sang giao diện overlay cách ly an toàn warning.html với thông điệp access denied ngay khi phát hiện bất thường.
+* discord ingress bot: Phân hệ giám sát chủ động kênh truyền thông cộng đồng, lắng nghe luồng tin nhắn và tương tác nhóm, tự động bóc tách các liên kết lừa đảo nguy hiểm hoặc ngăn chặn kịp thời các rủi ro rò rỉ mã token danh tính chưa mã hóa, thực hiện lệnh xóa bỏ mã độc trong micro-giây và phát alert thông tin cảnh báo an ninh thời gian thực.

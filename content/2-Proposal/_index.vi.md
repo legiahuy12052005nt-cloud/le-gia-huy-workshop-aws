@@ -1,108 +1,75 @@
 ---
-title: "Bản đề xuất"
-date: 2024-01-01
+title: "Bản đề xuất dự án"
+date: 2026-07-05
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-Tại phần này, bạn cần tóm tắt các nội dung trong workshop mà bạn **dự tính** sẽ làm.
-
-# IoT Weather Platform for Lab Research  
-## Giải pháp AWS Serverless hợp nhất cho giám sát thời tiết thời gian thực  
+# PhishShield Ecosystem  
+## Giải pháp AWS Serverless hợp nhất cho phòng thủ và đánh chặn lừa đảo chủ động tại Client Edge  
 
 ### 1. Tóm tắt điều hành  
-IoT Weather Platform được thiết kế dành cho nhóm *ITea Lab* tại TP. Hồ Chí Minh nhằm nâng cao khả năng thu thập và phân tích dữ liệu thời tiết. Nền tảng hỗ trợ tối đa 5 trạm thời tiết, có khả năng mở rộng lên 10–15 trạm, sử dụng thiết bị biên Raspberry Pi kết hợp cảm biến ESP32 để truyền dữ liệu qua MQTT. Nền tảng tận dụng các dịch vụ AWS Serverless để cung cấp giám sát thời gian thực, phân tích dự đoán và tiết kiệm chi phí, với quyền truy cập giới hạn cho 5 thành viên phòng lab thông qua Amazon Cognito.  
+**PhishShield Ecosystem** là một hệ sinh thái an ninh mạng đa tầng được thiết kế nhằm chủ động phát hiện, đánh chặn và cô lập các mối đe dọa từ kỹ nghệ thao túng tâm lý (Social Engineering) và tấn công lừa đảo chiếm đoạt thông tin (Credential Harvesting). Hệ thống thực thi kiến trúc Zero-Trust bằng cách kết hợp sức mạnh kiểm soát tại ranh giới người dùng (Client-Edge bao gồm Chrome Extension Manifest V3 và Discord Ingress Bot) với hạ tầng xử lý dữ liệu bất đồng bộ chạy trên nền tảng **AWS Serverless**. Dự án tối ưu hóa khả năng điều tra kỹ thuật số (Forensics), lưu trữ tập trung dữ liệu đe dọa (Threat Intel Data Lake) và đưa ra cảnh báo real-time với mức chi phí vận hành tiệm cận 0 USD.
 
 ### 2. Tuyên bố vấn đề  
-*Vấn đề hiện tại*  
-Các trạm thời tiết hiện tại yêu cầu thu thập dữ liệu thủ công, khó quản lý khi có nhiều trạm. Không có hệ thống tập trung cho dữ liệu hoặc phân tích thời gian thực, và các nền tảng bên thứ ba thường tốn kém và quá phức tạp.  
+* **Vấn đề hiện tại:** Các hình thức lừa đảo qua liên kết độc hại phân phối trên mạng xã hội (Facebook, Discord) ngày càng tinh vi, dễ dàng vượt qua các bộ lọc tĩnh truyền thống. Quá trình phát hiện và xử lý của các doanh nghiệp thường mang tính bị động (Reactive) – tức là chỉ xử lý sau khi sự cố lộ lọt thông tin (Data Breach) đã xảy ra. Đồng thời, việc thu thập mẫu độc hại phục vụ phân tích pháp chứng gặp khó khăn do dữ liệu bị phân tán.  
+* **Giải pháp:** PhishShield thiết lập lá chắn chủ động (Proactive Interception) tại tầng Chrome Extension bằng cách bắt giữ sự kiện điều hướng mạng mạng (`webNavigation`) để chặn đứng trang độc hại trước khi trình duyệt kịp nạp mã nguồn. Song song đó, Discord Bot tuần tra kênh chat để phát hiện sớm các token bị lộ hoặc link bẫy. Toàn bộ siêu dữ liệu (Metadata Artifact) được đẩy bất đồng bộ về API Gateway, đi qua hàng đợi Amazon SQS để giảm tải hệ thống, sau đó được xử lý bởi AWS Lambda để lưu trữ vào Amazon S3 (Data Lake) và lập chỉ mục trong Amazon DynamoDB phục vụ tra cứu thần tốc.  
+* **Lợi ích và hoàn vốn đầu tư (ROI):** Hệ thống loại bỏ hoàn toàn rủi ro mất tài khoản người dùng ngay tại ranh giới trình duyệt. Khối dữ liệu thu thập được tại S3 Data Lake đóng vai trò là nguồn tài nguyên vô giá (Threat Intel Artifact) để các mô hình AI/ML phân tích hành vi trong tương lai. Nhờ tận dụng triệt để kiến trúc Serverless, chi phí duy trì hệ thống gần như bằng 0 trong giai đoạn thử nghiệm (thuộc phạm vi AWS Free Tier), mang lại hiệu quả ROI vượt trội so với việc đầu tư các phần mềm SIEM/EDR thương mại đắt đỏ.
 
-*Giải pháp*  
-Nền tảng sử dụng AWS IoT Core để tiếp nhận dữ liệu MQTT, AWS Lambda và API Gateway để xử lý, Amazon S3 để lưu trữ (bao gồm data lake), và AWS Glue Crawlers cùng các tác vụ ETL để trích xuất, chuyển đổi, tải dữ liệu từ S3 data lake sang một S3 bucket khác để phân tích. AWS Amplify với Next.js cung cấp giao diện web, và Amazon Cognito đảm bảo quyền truy cập an toàn. Tương tự như Thingsboard và CoreIoT, người dùng có thể đăng ký thiết bị mới và quản lý kết nối, nhưng nền tảng này hoạt động ở quy mô nhỏ hơn và phục vụ mục đích sử dụng nội bộ. Các tính năng chính bao gồm bảng điều khiển thời gian thực, phân tích xu hướng và chi phí vận hành thấp.  
+### 3. Kiến trúc giải pháp
 
-*Lợi ích và hoàn vốn đầu tư (ROI)*  
-Giải pháp tạo nền tảng cơ bản để các thành viên phòng lab phát triển một nền tảng IoT lớn hơn, đồng thời cung cấp nguồn dữ liệu cho những người nghiên cứu AI phục vụ huấn luyện mô hình hoặc phân tích. Nền tảng giảm bớt báo cáo thủ công cho từng trạm thông qua hệ thống tập trung, đơn giản hóa quản lý và bảo trì, đồng thời cải thiện độ tin cậy dữ liệu. Chi phí hàng tháng ước tính 0,66 USD (theo AWS Pricing Calculator), tổng cộng 7,92 USD cho 12 tháng. Tất cả thiết bị IoT đã được trang bị từ hệ thống trạm thời tiết hiện tại, không phát sinh chi phí phát triển thêm. Thời gian hoàn vốn 6–12 tháng nhờ tiết kiệm đáng kể thời gian thao tác thủ công.  
+Hệ thống áp dụng mô hình phân tách trách nhiệm linh hoạt và toàn diện giữa tầng biên client edge (đánh chặn, cách ly và thu thập dữ liệu cấu trúc chủ động) và tầng xử lý trung tâm cloud backend (định tuyến tốc độ cao, xử lý phân tán đa vùng sẵn sàng, lưu trữ bền vững và phân tích mô hình trí tuệ nhân tạo chuyên sâu).
 
-### 3. Kiến trúc giải pháp  
-Nền tảng áp dụng kiến trúc AWS Serverless để quản lý dữ liệu từ 5 trạm dựa trên Raspberry Pi, có thể mở rộng lên 15 trạm. Dữ liệu được tiếp nhận qua AWS IoT Core, lưu trữ trong S3 data lake và xử lý bởi AWS Glue Crawlers và ETL jobs để chuyển đổi và tải vào một S3 bucket khác cho mục đích phân tích. Lambda và API Gateway xử lý bổ sung, trong khi Amplify với Next.js cung cấp bảng điều khiển được bảo mật bởi Cognito.  
+![Sơ đồ kiến trúc PhishShield Ecosystem](/images/2-Proposal/diagram.jpg)
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+* **Các dịch vụ hạ tầng thuộc nền tảng đám mây sử dụng:**
+  * **aws waf:** Tường lửa ứng dụng web đóng vai trò lọc kịch bản tấn công nguy hiểm, bảo vệ toàn vẹn các điểm kết nối biên trước luồng dữ liệu độc hại.
+  * **amazon api gateway:** Điểm tiếp nhận trung tâm cổng kết nối, thu thập siêu dữ liệu url và log an ninh từ client edgeendpoint chuyển tiếp qua giao thức bảo mật https.
+  * **aws lambda:** Triển khai kiến trúc serverless linh hoạt với hàm điều phối định tuyến phân tích nhanh (lambda url evaluation router) và hàm xử lý hậu trường bất đồng bộ.
+  * **amazon dynamodb:** Cơ sở dữ liệu nosql cấu hình lớp lưu trữ bộ đệm tốc độ cao (high-speed cache), phản hồi trực tiếp kết quả định danh danh sách đen để đáp ứng mục tiêu kpi độ trễ cực thấp.
+  * **application load balancer:** Bộ cân bằng tải ứng dụng thông minh chịu trách nhiệm điều phối dòng dữ liệu kết nối đồng đều đến các cụm máy chủ xử lý lớp trong.
+  * **amazon ec2:** Cụm máy chủ ảo hóa xử lý logic nghiệp vụ api phân tán chuyên sâu, được cấu hình tự động mở rộng và triển khai đa vùng sẵn sàng (multi-az) bên trong các phân vùng mạng public subnet bảo mật.
+  * **cơ sở dữ liệu liên kết (db):** Phân hệ lưu trữ dữ liệu có cấu trúc quan hệ, được cô lập an toàn trong các vùng mạng private subnet riêng biệt để phòng chống các nguy cơ khai thác thông tin trực diện.
+  * **amazon s3:** Vùng tài nguyên data lake lưu trữ cấu trúc tệp dữ liệu nhật ký định dạng json phục vụ mục đích giám sát lâu dài, đồng thời kết hợp làm kho chứa tài nguyên nội dung phân phối tĩnh.
+  * **amazon bedrock:** Nền tảng tích hợp trí tuệ nhân tạo thế hệ mới, gọi các mô hình nền tảng tiên tiến để thực thi tác vụ phân tích sâu bất đồng bộ (asynchronous deep analysis) kịch bản lừa đảo nâng cao.
+  * **amazon cloudfront:** Mạng lưới phân phối nội dung (content distribution) toàn cầu giúp tối ưu hóa bộ nhớ đệm và tăng tốc truyền tải dữ liệu đến thiết bị đầu cuối.
+  * **phân hệ an ninh và quản trị hệ thống chéo (cross-cutting security & governance):** Tích hợp đồng bộ các giải pháp quản lý khóa mã hóa vật lý `aws kms`, phân cấp đặc quyền tối thiểu `aws iam`, quản trị chuỗi mật mã bí mật `aws secrets manager`, tối ưu hóa hạn mức tài chính `aws budgets`, giám sát tài nguyên thời gian thực `amazon cloudwatch` và tự động hóa triển khai hạ tầng bằng mã lệnh `aws cloudformation`.
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
-
-*Dịch vụ AWS sử dụng*  
-- *AWS IoT Core*: Tiếp nhận dữ liệu MQTT từ 5 trạm, mở rộng lên 15.  
-- *AWS Lambda*: Xử lý dữ liệu và kích hoạt Glue jobs (2 hàm).  
-- *Amazon API Gateway*: Giao tiếp với ứng dụng web.  
-- *Amazon S3*: Lưu trữ dữ liệu thô (data lake) và dữ liệu đã xử lý (2 bucket).  
-- *AWS Glue*: Crawlers lập chỉ mục dữ liệu, ETL jobs chuyển đổi và tải dữ liệu.  
-- *AWS Amplify*: Lưu trữ giao diện web Next.js.  
-- *Amazon Cognito*: Quản lý quyền truy cập cho người dùng phòng lab.  
-
-*Thiết kế thành phần*  
-- *Thiết bị biên*: Raspberry Pi thu thập và lọc dữ liệu cảm biến, gửi tới IoT Core.  
-- *Tiếp nhận dữ liệu*: AWS IoT Core nhận tin nhắn MQTT từ thiết bị biên.  
-- *Lưu trữ dữ liệu*: Dữ liệu thô lưu trong S3 data lake; dữ liệu đã xử lý lưu ở một S3 bucket khác.  
-- *Xử lý dữ liệu*: AWS Glue Crawlers lập chỉ mục dữ liệu; ETL jobs chuyển đổi để phân tích.  
-- *Giao diện web*: AWS Amplify lưu trữ ứng dụng Next.js cho bảng điều khiển và phân tích thời gian thực.  
-- *Quản lý người dùng*: Amazon Cognito giới hạn 5 tài khoản hoạt động.  
+* **Thiết kế chi tiết các cấu phần hệ thống:**
+  * **browser extension (manifest v3):** Đóng vai trò lớp phòng thủ chủ động trực tiếp trên trình duyệt lõi chromium của người dùng, ứng dụng tiến trình service worker chạy ngầm `background.js` để tuần tra lưu lượng kết nối thời gian thực và thực thi lệnh bẻ lái sang giao diện overlay cách ly an toàn `warning.html` với thông điệp access denied ngay khi phát hiện bất thường.
+  * **discord ingress bot:** Phân hệ giám sát chủ động kênh truyền thông cộng đồng, lắng nghe luồng tin nhắn và tương tác nhóm, tự động bóc tách các liên kết lừa đảo nguy hiểm hoặc ngăn chặn kịp thời các rủi ro rò rỉ mã token danh tính chưa mã hóa, thực hiện lệnh xóa bỏ mã độc trong micro-giây và phát alert thông tin cảnh báo an ninh thời gian thực.
 
 ### 4. Triển khai kỹ thuật  
-*Các giai đoạn triển khai*  
-Dự án gồm 2 phần — thiết lập trạm thời tiết biên và xây dựng nền tảng thời tiết — mỗi phần trải qua 4 giai đoạn:  
-1. *Nghiên cứu và vẽ kiến trúc*: Nghiên cứu Raspberry Pi với cảm biến ESP32 và thiết kế kiến trúc AWS Serverless (1 tháng trước kỳ thực tập).  
-2. *Tính toán chi phí và kiểm tra tính khả thi*: Sử dụng AWS Pricing Calculator để ước tính và điều chỉnh (Tháng 1).  
-3. *Điều chỉnh kiến trúc để tối ưu chi phí/giải pháp*: Tinh chỉnh (ví dụ tối ưu Lambda với Next.js) để đảm bảo hiệu quả (Tháng 2).  
-4. *Phát triển, kiểm thử, triển khai*: Lập trình Raspberry Pi, AWS services với CDK/SDK và ứng dụng Next.js, sau đó kiểm thử và đưa vào vận hành (Tháng 2–3).  
+* **Các giai đoạn triển khai:** 1. *Nghiên cứu và thiết kế ma trận:* Phân tích các kỹ thuật bypass của mã độc lừa đảo, thiết kế luồng di chuyển dữ liệu bất đồng bộ qua mô hình Serverless.  
+  2. *Cấu hình tài nguyên Cloud:* Khởi tạo cấu trúc bảng DynamoDB, cấu hình S3 Bucket Object, thiết lập hàng đợi SQS định tuyến và phân cấp IAM Roles bảo mật.  
+  3. *Phát triển Core Logic:* Viết mã nguồn cho các hàm AWS Lambda, thiết lập API Gateway tích hợp Proxy và lập trình module Client Edge (Extension & Discord Bot).  
+  4. *Kiểm thử thực nghiệm & Đánh giá:* Giả lập DNS Spoofing qua tệp `hosts`, dựng server mồi bẫy bằng Python HTTP Server để thực hiện kịch bản test "Trước - Sau" và tối ưu hóa hệ thống.
 
-*Yêu cầu kỹ thuật*  
-- *Trạm thời tiết biên*: Cảm biến (nhiệt độ, độ ẩm, lượng mưa, tốc độ gió), vi điều khiển ESP32, Raspberry Pi làm thiết bị biên. Raspberry Pi chạy Raspbian, sử dụng Docker để lọc dữ liệu và gửi 1 MB/ngày/trạm qua MQTT qua Wi-Fi.  
-- *Nền tảng thời tiết*: Kiến thức thực tế về AWS Amplify (lưu trữ Next.js), Lambda (giảm thiểu do Next.js xử lý), AWS Glue (ETL), S3 (2 bucket), IoT Core (gateway và rules), và Cognito (5 người dùng). Sử dụng AWS CDK/SDK để lập trình (ví dụ IoT Core rules tới S3). Next.js giúp giảm tải Lambda cho ứng dụng web fullstack.  
+* **Yêu cầu kỹ thuật:** * Môi trường Node.js (v24+) phục vụ vận hành Discord Bot; JavaScript chuẩn Manifest V3 cho cấu trúc Extension.  
+  * Toàn bộ mã nguồn hàm xử lý trên Cloud được viết bằng Python/Node.js trên AWS Lambda, đảm bảo thời gian thực thi (Execution Time) dưới 3 giây.  
 
 ### 5. Lộ trình & Mốc triển khai  
-- *Trước thực tập (Tháng 0)*: 1 tháng lên kế hoạch và đánh giá trạm cũ.  
-- *Thực tập (Tháng 1–3)*:  
-    - Tháng 1: Học AWS và nâng cấp phần cứng.  
-    - Tháng 2: Thiết kế và điều chỉnh kiến trúc.  
-    - Tháng 3: Triển khai, kiểm thử, đưa vào sử dụng.  
-- *Sau triển khai*: Nghiên cứu thêm trong vòng 1 năm.  
+* **Tuần 1 - 3:** Nghiên cứu tài liệu bảo mật AWS, thiết lập và khởi tạo hạ tầng Cloud lưu trữ cơ bản (DynamoDB, S3, SQS).  
+* **Tuần 4 - 6:** Cấu hình phân quyền IAM, viết mã nguồn hàm xử lý trung tâm AWS Lambda và triển khai API Gateway Endpoint công khai.  
+* **Tuần 7 - 9:** Lập trình phân hệ Client Side bao gồm Chrome Extension (Manifest V3) và Discord Bot gác cổng.  
+* **Tuần 10 - 12:** Tích hợp toàn diện hệ thống (End-to-End), chạy kịch bản thực nghiệm đánh chặn thực tế, thu thập số liệu báo cáo và tối ưu hóa mã nguồn.
 
 ### 6. Ước tính ngân sách  
-Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)  
-Hoặc tải [tệp ước tính ngân sách](../attachments/budget_estimation.pdf).  
+Dự án được tối ưu hóa kiến trúc để nằm trọn trong hạn mức **AWS Free Tier**, đảm bảo chi phí phát triển cục bộ bằng 0 USD.
 
-*Chi phí hạ tầng*  
-- AWS Lambda: 0,00 USD/tháng (1.000 request, 512 MB lưu trữ).  
-- S3 Standard: 0,15 USD/tháng (6 GB, 2.100 request, 1 GB quét).  
-- Truyền dữ liệu: 0,02 USD/tháng (1 GB vào, 1 GB ra).  
-- AWS Amplify: 0,35 USD/tháng (256 MB, request 500 ms).  
-- Amazon API Gateway: 0,01 USD/tháng (2.000 request).  
-- AWS Glue ETL Jobs: 0,02 USD/tháng (2 DPU).  
-- AWS Glue Crawlers: 0,07 USD/tháng (1 crawler).  
-- MQTT (IoT Core): 0,08 USD/tháng (5 thiết bị, 45.000 tin nhắn).  
-
-*Tổng*: 0,7 USD/tháng, 8,40 USD/12 tháng  
-- *Phần cứng*: 265 USD một lần (Raspberry Pi 5 và cảm biến).  
+* **Chi phí ước tính khi mở rộng quy mô (Sản xuất):** * *Amazon API Gateway:* 0,01 USD / tháng (mô phỏng ~3.000 requests phân tích log).  
+  * *AWS Lambda:* 0,00 USD (nằm trong hạn mức 1 triệu request miễn phí hàng tháng).  
+  * *Amazon SQS:* 0,00 USD (nằm trong gói 1 triệu thông điệp miễn phí).  
+  * *Amazon S3 & DynamoDB:* ~0,10 USD / tháng cho dung lượng lưu trữ mẫu log thô dưới 5GB.  
+* **Tổng chi phí hạ tầng Cloud:** Tiệm cận ~0,11 USD / tháng (Cực kỳ tối ưu cho các dự án an ninh mạng nội bộ).
 
 ### 7. Đánh giá rủi ro  
-*Ma trận rủi ro*  
-- Mất mạng: Ảnh hưởng trung bình, xác suất trung bình.  
-- Hỏng cảm biến: Ảnh hưởng cao, xác suất thấp.  
-- Vượt ngân sách: Ảnh hưởng trung bình, xác suất thấp.  
-
-*Chiến lược giảm thiểu*  
-- Mạng: Lưu trữ cục bộ trên Raspberry Pi với Docker.  
-- Cảm biến: Kiểm tra định kỳ, dự phòng linh kiện.  
-- Chi phí: Cảnh báo ngân sách AWS, tối ưu dịch vụ.  
-
-*Kế hoạch dự phòng*  
-- Quay lại thu thập thủ công nếu AWS gặp sự cố.  
-- Sử dụng CloudFormation để khôi phục cấu hình liên quan đến chi phí.  
+* **Rủi ro 1 (API Gateway bị spam/DDoS):** Kẻ tấn công có thể spam log giả để làm tăng chi phí Cloud.  
+  * *Giảm thiểu:* Cấu hình Throttling Rate và Quota Limit trực tiếp trên API Gateway Stage.  
+* **Rủi ro 2 (Token hoặc thông tin IAM bị lộ):** Lộ thông tin cấu hình file `.env` của Bot lên GitHub.  
+  * *Giảm thiểu:* Áp dụng triệt để file `.gitignore`, hardcode tạm thời trong môi trường lab cô lập và sử dụng AWS Secrets Manager khi triển khai thực tế.  
 
 ### 8. Kết quả kỳ vọng  
-*Cải tiến kỹ thuật*: Dữ liệu và phân tích thời gian thực thay thế quy trình thủ công. Có thể mở rộng tới 10–15 trạm.  
-*Giá trị dài hạn*: Nền tảng dữ liệu 1 năm cho nghiên cứu AI, có thể tái sử dụng cho các dự án tương lai.
+* **Về mặt kỹ thuật:** Xây dựng thành công một lá chắn an ninh mạng Monorepo hợp nhất, bẻ lái luồng truy cập độc hại thành công 100% tại Client Edge sang trang cảnh báo an toàn.  
+* **Về mặt nghiên cứu:** Tạo lập kho lưu trữ tri thức mối đe dọa (Threat Intel Data Lake) chuẩn cấu trúc JSON trên S3, sẵn sàng cung cấp nguồn dữ liệu sạch để huấn luyện các mô hình AI phát hiện mã độc tự động trong tương lai.

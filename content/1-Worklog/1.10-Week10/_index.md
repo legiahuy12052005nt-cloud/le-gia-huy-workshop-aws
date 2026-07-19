@@ -1,57 +1,35 @@
 ---
-title: "Week 10 Worklog"
-date: 2024-01-01
-weight: 2
+title: "Worklog Week 10"
+date: 2026-06-22
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 10 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Build a cluster of background processing servers to conduct deep analysis of links that have never appeared in the database.
+* Integrate cloud artificial intelligence platforms to comprehend webpage content, identifying sophisticated phishing tactics and zero-day threats.
+* Establish a pipeline to store analysis results and system logs into a centralized data lake for future reporting and model training purposes.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+### Tasks to be Deployed This Week:
+
+| Day | Task | Start Date | End Date | Resource Links |
+| --- | --- | --- | --- | --- |
+| 2 | - Deploy a worker nodes compute cluster using amazon ec2 combined with an auto scaling group <br> - Configure an application load balancer to evenly distribute background analysis tasks from the system | 22/06/2026 | 22/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - Research and establish the generative artificial intelligence subsystem via the amazon bedrock service <br> - Build optimal prompt engineering templates to direct large language models (llm) in analyzing phishing indicators from webpage source code and text | 23/06/2026 | 23/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - Write web scraping scripts on amazon ec2 servers to automatically access, capture, and extract content from suspicious urls <br> - Integrate the sdk to send the newly collected raw data to amazon bedrock for risk level evaluation | 24/06/2026 | 24/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - Configure the persistent storage flow: Push all analysis result payloads and raw json logs into the data lake on amazon s3 <br> - Program the reverse update mechanism: Automatically write new malware detection results back into the blacklist table on amazon dynamodb | 25/06/2026 | 25/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - Conduct load testing and verify the integrity of the asynchronous processing flow <br> - Monitor system telemetry parameters, optimize caching, and fine-tune timeout settings to prevent process hangs | 26/06/2026 | 26/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+
+---
 
 ### Week 10 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Successfully deployed a flexible compute infrastructure with amazon ec2 and application load balancer, ensuring the system can automatically scale processing resources smoothly during sudden spikes in suspicious link traffic.
+* Effectively leveraged the ai power of the amazon bedrock platform; the artificial intelligence model is now capable of comprehending webpage structures, accurately identifying fake banking interfaces or credential-stealing login forms without relying on static blacklists.
+* Perfected safe web scraping execution scripts within an isolated server environment, eliminating the risk of reverse malware infection from malicious websites to the core server system.
+* Successfully established a closed-loop data cycle: the system automatically pushes analysis evidence into the amazon s3 cold storage repository as audit resources, while simultaneously updating new malicious urls into amazon dynamodb to protect massive numbers of other users in real time.
+* Measured and validated that the asynchronous workflow operates flawlessly; deep analysis tasks running in the backend (taking 3-5 seconds) cause absolutely no impact on the high-speed web browsing experience of users at the edge layer.

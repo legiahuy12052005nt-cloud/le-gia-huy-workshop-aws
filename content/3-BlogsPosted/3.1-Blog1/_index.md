@@ -1,31 +1,43 @@
 ---
-title: "Blog 1"
-date: 2024-01-01
+title: "Blog 1: Amazon Bedrock Guardrails"
+date: 2026-06-05
 weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
+# Amazon Bedrock Guardrails: A "Firewall" Against Prompt Injection and PII Leakage for LLM Applications
 
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+Hello AWS Study Group fellow members! 
 
-Key points to know:
+Integrating LLMs as Chatbots or AI Agents is currently booming. However, there is a fatal flaw that many development teams are overlooking: Security for GenAI. How do we prevent users from "social engineering" the AI, forcing it to break system rules (Prompt Injection), or accidentally leaking sensitive personally identifiable information (PII)?
 
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
+If you are still sitting around writing Regex or coding manual filters yourself, stop right there. AWS already has an enterprise-grade solution that perfectly handles this challenge: Amazon Bedrock Guardrails.
 
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
+### What is Bedrock Guardrails?
+Simply put, Guardrails acts as an independent, bidirectional firewall standing between your application and the Foundation Model (such as Claude 3.5, Amazon Nova):
 
-...Image...
+* **Input Control:** Intercepts malicious commands or user jailbreak traps before they can even reach the LLM.
+* **Output Control:** Scans and filters the LLM's responses to ensure the AI does not use profanity, go off-topic, or expose confidential system data.
 
-...Link...
+### 4 "Essential" Security Layers of Guardrails
+When configuring a Guardrail, you will have 4 powerful weapons at your disposal to fine-tune directly on the Console without touching a single line of code:
 
-...Guide...
+* **Content Filters:** Automatically detects and blocks 6 categories of harmful content, including hidden prompt attacks (Prompt Injection).
+* **Denied Topics:** Defines topics in natural language that you absolutely do not want the AI to engage in (For example: Banning the AI from giving financial investment advice).
+* **Word Filters:** Filters out profane language or sensitive, proprietary keywords of the enterprise.
+* **Sensitive Information Filters (PII Masking):** Automatically detects government ID numbers, Emails, or Bank Account numbers. You can choose to block them entirely (Block) or automatically obscure them (Masking - turning account numbers into *********) before displaying them to the user.
+
+### Performance vs. Cost Trade-offs?
+
+* **About Latency:** Because it runs natively on Bedrock's optimized infrastructure, the additional latency added is only about a few milliseconds (ms), keeping the user experience completely seamless.
+* **About Cost:** Pricing is based on the volume of Tokens scanned at an extremely affordable rate. In return, your application is absolutely secured, avoiding severe data leak scandals.
+
+Securing GenAI is now a must-have requirement, no longer just a "nice-to-have" feature. Has anyone here deployed Guardrails for their running Production systems yet? Let's discuss!
+
+---
+
+### Reference Link
+* https://aws.amazon.com/vi/blogs/machine-learning/safeguard-a-generative-ai-travel-agent-with-prompt-engineering-and-amazon-bedrock-guardrails/
+
+![Sơ đồ minh họa](/images/blog1.png)

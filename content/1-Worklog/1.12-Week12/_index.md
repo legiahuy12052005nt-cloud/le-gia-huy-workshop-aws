@@ -1,57 +1,35 @@
 ---
-title: "Week 12 Worklog"
-date: 2024-01-01
-weight: 2
+title: "Worklog Week 12"
+date: 2026-07-06
+weight: 12
 chapter: false
 pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 12 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Conduct a comprehensive review and performance evaluation of the security ecosystem before final acceptance.
+* Finalize the technical specification documentation system, deployment guidelines, and hand over the project source code.
+* Prepare the presentation script, set up the live demo environment, and summarize the internship journey.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+### Tasks to be Deployed This Week:
+
+| Day | Task | Start Date | End Date | Resource Links |
+| --- | --- | --- | --- | --- |
+| 2 | - Perform final end-to-end testing across the entire ecosystem <br> - Extract performance report metrics from amazon cloudwatch and compile statistics on successfully intercepted requests via amazon api gateway | 06/07/2026 | 06/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - Compile the technical documentation summarizing the entire constructed infrastructure architecture <br> - Write specifications for apis, security configurations, and the ci/cd automation process using github actions | 07/07/2026 | 07/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - Design presentation slides summarizing the progress of the internship project <br> - Configure the live demo environment, prepare demonstration scripts for intercepting phishing links on the chrome extension and discord bot | 08/07/2026 | 08/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - Review the entire source code, perform cleanups of redundant or draft cloud resources to optimize costs <br> - Verify and push the complete release version to the github online repository | 09/07/2026 | 09/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - Present the final project acceptance report, conduct a live product demo, and complete handover procedures with the mentor <br> - Summarize lessons learned regarding distributed system design thinking, aws waf edge security, and amazon bedrock ai applications | 10/07/2026 | 10/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+
+---
 
 ### Week 12 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Confirmed that the system operates stably and meets 100% of the initial business requirements; achieved smooth data flows from the client edge to the cloud backend without bottlenecks thanks to the flexible scalable architecture.
+* Completed a professional technical documentation suite, including detailed architecture diagrams, environment variable configuration guides, and a one-click automated project redeployment process.
+* Successfully built an intuitive product demo script, making a strong impression with the ability to rapidly detect zero-day phishing tactics through deep integration of the ai brain from amazon bedrock.
+* Handed over clean source code, strictly adhering to cloud security standards and minimizing operational costs for the system maintenance phase.
+* Successfully concluded the internship journey; accumulated a massive amount of valuable practical experience in deploying comprehensive cloud infrastructures, from architectural ideation and network security to ai integration and ci/cd automation operations.

@@ -1,59 +1,28 @@
 ---
 title: "Worklog Tuần 3"
-date: 2024-01-01
-weight: 1
+date: 2026-05-04
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 3:
+* Tìm hiểu giải pháp quản trị cơ sở dữ liệu, cách tối ưu chi phí với máy chủ cấu hình sẵn và cơ chế tự động mở rộng quy mô.
+* Thiết lập hệ thống giám sát tài nguyên, phân giải tên miền lai và hoàn thành bài lab tổng hợp về ứng dụng web có tính sẵn sàng cao.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các công việc cụ thể trong tuần:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Nội dung công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| :--- | :--- | :---: | :---: | :--- |
+| **2** | - Tìm hiểu lý thuyết về hệ quản trị cơ sở dữ liệu đám mây và giải pháp máy chủ thu nhỏ tối ưu chi phí.<br>- Thực hành: Create a database on Amazon Relational Database Service (Amazon RDS) để tạo cơ sở dữ liệu quan hệ và cấu hình bài lab Optimize compute costs with Amazon Lightsail (Amazon Lightsail). | 04/05/2026 | 04/05/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| **3** | - Nghiên cứu cơ chế tự động tăng giảm số lượng máy chủ dựa theo lưu lượng truy cập thực tế của người dùng.<br>- Thực hành: Cấu hình phân hệ Automate Application Scaling with Amazon EC2 Autoscaling, thiết lập các điều kiện ngưỡng để hệ thống tự động thêm hoặc giảm bớt máy chủ ảo. | 05/05/2026 | 05/05/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| **4** | - Tìm hiểu giải pháp quản lý tập trung và theo dõi trạng thái sức khỏe của toàn bộ hạ tầng dịch vụ.<br>- Thực hành: Cấu hình bài lab Create System Monitor with Amazon Cloudwatch để thu thập log, theo dõi biểu đồ CPU và tạo cảnh báo tự động về Email. | 06/05/2026 | 06/05/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| **5** | - Nghiên cứu mô hình phân giải tên miền kết hợp giữa hạ tầng mạng local và mạng đám mây đám mây.<br>- Thực hành: Set up an integrated hybrid DNS system between Local and Amazon VPC environments with Amazon Route53 và thực hiện bài lab Using AWS CLI on Amazon EC2 (Windows/Ubuntu) để điều khiển máy chủ bằng dòng lệnh. | 07/05/2026 | 07/05/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| **6** | - Tổng hợp toàn bộ các kiến thức đã học từ đầu kỳ thực tập đến nay để xây dựng mô hình kiến trúc chịu lỗi.<br>- Thực hành: Tham gia và hoàn thành bài lab lớn Highly Available Web Application Workshop, thiết kế hệ thống web chạy ổn định, tự động cân bằng tải và không bị gián đoạn khi có sự cố. | 08/05/2026 | 08/05/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
 
+### Kết quả đạt được trong tuần 3:
 
-### Kết quả đạt được tuần 3:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Về cơ sở dữ liệu và tối ưu: Em đã biết cách tự tạo và kết nối một cụm cơ sở dữ liệu hoạt động độc lập bằng Amazon Relational Database Service (Amazon RDS), đồng thời biết cách dùng Amazon Lightsail để triển khai nhanh các ứng dụng nhỏ nhằm tiết kiệm ngân sách.
+* Về tính mở rộng và giám sát: Thành thạo các bước thiết lập Amazon EC2 Autoscaling để hệ thống tự động co giãn máy chủ khi bị tải cao. Sử dụng thành công Amazon Cloudwatch để làm bảng điều khiển theo dõi tài nguyên trực quan.
+* Về hệ thống DNS và dòng lệnh: Hiểu nguyên lý cấu hình định tuyến tên miền lai bằng Amazon Route53 giữa môi trường nội bộ và đám mây, biết cách cài đặt và chạy các câu lệnh AWS CLI thuần thục trên cả hai hệ điều hành Windows và Ubuntu.
+* Về kiến trúc tổng hợp: Hoàn thành trọn vẹn bài Highly Available Web Application Workshop, giúp em hình dung rõ ràng cách phối hợp các dịch vụ mạng, máy chủ, cơ sở dữ liệu và bảo mật để tạo ra một hệ thống ứng dụng web chạy Production thực tế.
