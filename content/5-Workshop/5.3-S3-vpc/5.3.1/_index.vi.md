@@ -98,3 +98,4 @@ Thành phần này cấp quyền cho hàm xử lý lambda router có thể ghi n
         }
     ]
 }
+

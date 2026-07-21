@@ -24,3 +24,4 @@ The detailed progress and tasks deployed over the 3 months are as follows:
 *   **Week 10:** [Building asynchronous deep analysis subsystems integrating amazon bedrock ai](1.10-week10/)
 *   **Week 11:** [Enhancing security with aws waf and finalizing ci/cd automation pipelines](1.11-week11/)
 *   **Week 12:** [Comprehensive testing, packaging technical documentation, and project acceptance reporting](1.12-week12/)
+

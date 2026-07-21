@@ -1,43 +1,22 @@
 ---
 title: "Các events đã tham gia"
-date: 2024-01-01
+date: 2026-06-13
 weight: 4
 chapter: false
 pre: " <b> 4. </b> "
 ---
 
-
-> Trong phần này, các bạn cần liệt kê và mô tả chi tiết các sự kiện (event) mà mình đã tham gia trong suốt quá trình thực tập hoặc làm việc. 
-> 
-> Mỗi sự kiện nên được trình bày theo định dạng Event 1, Event 2, Event 3…, kèm theo các thông tin:
-> * Tên sự kiện
-> * Thời gian tổ chức
-> * Địa điểm (nếu có)
-> * Vai trò của bạn trong sự kiện (người tham dự, hỗ trợ tổ chức, diễn giả, v.v.)
-> * Mô tả ngắn gọn nội dung và hoạt động chính trong sự kiện
-> * Kết quả hoặc giá trị đạt được (bài học, kỹ năng mới, đóng góp cho nhóm/dự án)
-> * Việc liệt kê này giúp thể hiện rõ sự tham gia thực tế của bạn, cũng như các kỹ năng mềm và kinh nghiệm bạn đã tích lũy qua từng sự kiện.
-
-
-Trong quá trình thực tập, em đã tham gia 2 events, với mỗi event là một trải nghiệm đáng nhớ với những kiến thức mới, hay và bổ ích, cùng với đó là nhứng món quà và những khoảnh khắc rất tuyệt vời.
+Trong quá trình thực tập, em đã tham gia các events chuyên đề, với mỗi event là một trải nghiệm đáng nhớ giúp em trau dồi kiến thức thực tế, nâng cao kỹ năng và định hướng rõ ràng hơn cho con đường phát triển sự nghiệp đám mây.
 
 ### [Event 1](4.1-Event1/)
-&emsp;**Tên sự kiện:** GenAI-powered App-DB Modernization workshop
+&emsp;**Tên sự kiện:** Workshop: Kiến trúc AWS, Văn hóa DevOps & Định hướng Phát triển Sự nghiệp
 
-&emsp;**Thời gian:** 09:00 ngày 13/08/2025
+&emsp;**Thời gian:** 09:00 ngày 13/06/2026
 
-&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
+&emsp;**Địa điểm:** Trực tuyến qua Google Meet
 
-&emsp;**Vai trò trong sự kiện:** Người tham dự 
+&emsp;**Vai trò trong sự kiện:** Người tham dự
 
+&emsp;**Mô tả ngắn gọn nội dung:** Sự kiện chia sẻ kinh nghiệm thực chiến xoay quanh 4 chuyên đề chính: Chuyện nghề và văn hóa làm việc tại tập đoàn đa quốc gia; Công việc thực tế của một DevOps Engineer (xử lý sự cố, quản lý CI/CD, tối ưu hóa chi phí Cloud); Phân tích thiết kế kiến trúc hệ thống chịu tải cao (A scalable URL shortening service on AWS); Lộ trình 8 bước phát triển sự nghiệp từ sinh viên đến AWS Partner.
 
-
-### [Event 2](4.2-Event2/)
-&emsp;**Tên sự kiện:** GenAI-powered App-DB Modernization workshop
-
-&emsp;**Thời gian:** 09:00 ngày 13/08/2025
-
-&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
-
-&emsp;**Vai trò trong sự kiện:** Người tham dự 
-
+&emsp;**Kết quả đạt được:** Giúp em hiểu rõ quy trình vận hành hệ thống thực tế trên AWS, thay đổi tư duy từ "viết code" sang "quản trị và tối ưu hệ thống". Em tích lũy được tư duy thiết kế kiến trúc Scalable để ứng dụng vào đồ án thực tập, đồng thời biết cách xây dựng một Portfolio chuyên nghiệp chuẩn bị cho hành trình ứng tuyển.

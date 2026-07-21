@@ -1,125 +1,77 @@
 ---
-title: "Event 1"
-date: 2024-01-01
+title: "Workshop: Kiến trúc AWS, Văn hóa DevOps & Định hướng Phát triển Sự nghiệp"
+date: 2026-06-13
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+# Bài thu hoạch: Kiến trúc AWS, Văn hóa DevOps & Hành trình sự nghiệp 
 
 ### Mục Đích Của Sự Kiện
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+- Học hỏi kinh nghiệm "thực chiến" từ các anh đi trước về môi trường làm việc tại các công ty, tập đoàn đa quốc gia.
+- Hiểu đúng và đủ về công việc thực sự của một kỹ sư DevOps, thoát khỏi những lý thuyết sách vở.
+- Tiếp cận cách thiết kế một hệ thống thực tế trên AWS (URL Shortener) và vạch ra lộ trình phát triển từ sinh viên thực tập đến chuyên gia (AWS Partner).
 
 ### Danh Sách Diễn Giả
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+Buổi Meet quy tụ các anh có rất nhiều kinh nghiệm trong ngành:
+- **Anh Đạt Phạm** (Data Analytics Engineer) & **Anh Cường Nguyễn** (Process Engineer).
+- **Anh Hoàng Trọng** - DevOps Engineer @ Endava Vietnam.
+- **Anh Đinh Trung Kiên** & **Anh Nguyễn Minh Thọ**.
+- **Anh Danh Hoàng Hiếu Nghị** - AI Engineer, AWS Community Builder.
 
 ### Nội Dung Nổi Bật
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+#### 1. Chuyện nghề, chuyện công ty (Anh Đạt & Anh Cường)
+- Góc nhìn chân thực về môi trường làm việc quốc tế: Từ quy trình phối hợp giữa các phòng ban đến cách sinh viên mới ra trường đối mặt và vượt qua áp lực công việc.
+- Bài toán kết hợp giữa xử lý dữ liệu (Data Analytics) và tối ưu quy trình (Process Engineering) để giải quyết các vấn đề vận hành ở quy mô lớn.
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+#### 2. Kỹ sư DevOps thực sự làm gì? (Anh Hoàng Trọng)
+- **Vỡ mộng lý thuyết:** DevOps không chỉ là việc ngồi viết script cấu hình CI/CD. Đó là trung tâm gỡ rối xử lý muôn vàn "nỗi đau" của dự án như lỗi môi trường, server sập, hay phàn nàn của khách hàng về tốc độ hệ thống.
+- **Công việc thực tế hàng ngày:** Trực hệ thống (On-call), xử lý sự cố (Incident handling), hỗ trợ các team khác và đặc biệt là bài toán kiểm soát chi phí (Cost investigation) – điều mà lúc làm đồ án ở trường sinh viên ít khi để ý tới.
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+#### 3. Xây dựng dịch vụ URL Shortener trên AWS (Anh Kiên & Anh Thọ)
+- **Thiết kế kiến trúc (System Design):** Mổ xẻ bài toán rút gọn link kinh điển (giống Bitly) và cách đưa nó lên đám mây AWS.
+- **Khả năng mở rộng (Scalability):** Cách hệ thống chịu tải khi lượng truy cập tăng vọt, lựa chọn database phù hợp để việc truy xuất link chỉ mất vài mili-giây mà không bị nghẽn (bottleneck).
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
-
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
-
-#### Domain-Driven Design (DDD)
-
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
-
-#### Event-Driven Architecture
-
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
-
-#### Compute Evolution
-
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
-
-#### Amazon Q Developer
-
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+#### 4. Hành trình từ sinh viên đến AWS Partner (Anh Hiếu Nghị)
+- Lộ trình 8 bước rất rõ ràng cho người mới: (1) Bắt đầu từ sự tò mò -> (2) Tìm hiểu Cloud -> (3) Tham gia cộng đồng -> (4) Thực hành Labs -> (5) Làm dự án -> (6) Xây Portfolio -> (7) AWS Partner -> (8) Trở lại đóng góp cho cộng đồng (Share Back).
 
 ### Những Gì Học Được
 
-#### Tư Duy Thiết Kế
+#### Về Kiến thức Kỹ thuật
+- Hiểu được sự khác biệt giữa code chạy trên máy tính cá nhân (local) và code chạy trên hệ thống Production.
+- Biết cách các dịch vụ của AWS liên kết với nhau trong một kiến trúc Scalable, hiểu được tầm quan trọng của việc giám sát hệ thống và tự động hóa.
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+#### Về Tư duy Nghề nghiệp
+- Sự nghiệp không chỉ có mỗi việc "code giỏi", mà kỹ năng giao tiếp, làm việc nhóm, và trách nhiệm với hệ thống (Ownership) quan trọng không kém.
+- Nhận ra bản thân đang ở giai đoạn "School Projects" trong lộ trình 8 bước và cần phải gấp rút hoàn thiện "Portfolio" để chuẩn bị cho hành trình sắp tới.
 
-#### Kiến Trúc Kỹ Thuật
+### Ứng Dụng Vào Công Việc & Thực Tập
 
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
+- **Áp dụng DevOps vào đồ án:** Thay vì deploy thủ công như trước, em sẽ bắt đầu tập viết các đường ống CI/CD đơn giản trên GitHub Actions cho các project thực tập hiện tại.
+- **Tối ưu kiến trúc:** Ứng dụng tư duy thiết kế từ bài toán "URL Shortener" để xem xét lại cách lưu trữ và truy xuất dữ liệu trong đồ án cá nhân sao cho tối ưu thời gian phản hồi nhất.
+- **Xây dựng Portfolio:** Gom nhặt lại các bài lab, các project nhỏ lẻ trong quá trình thực tập, viết file README.md thật cẩn thận để làm một Portfolio chỉn chu đi xin việc, đúng với tinh thần các anh đã định hướng.
 
-#### Chiến Lược Hiện Đại Hóa
+### Trải nghiệm trong sự kiện
 
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
+Tham gia buổi Meet vào ngày **13/06/2026** thực sự là một cột mốc đáng nhớ trong quá trình thực tập của em. 
 
-### Ứng Dụng Vào Công Việc
+#### Những bài học "giải ngố"
+- Trước đây, em thường nghĩ DevOps là một vị trí khá khô khan và chỉ toàn code cấu hình. Nhưng nghe anh Trọng chia sẻ về những ca trực on-call cứu server hay những lần đi gỡ lỗi hệ thống mới thấy vị trí này ngầu và quan trọng đến mức nào. 
 
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
+#### Định hướng rõ ràng hơn
+- Những chia sẻ thực tế từ anh Đạt, anh Cường và lộ trình của anh Hiếu Nghị giúp một sinh viên thực tập như em bớt đi sự chênh vênh. Em không còn hoang mang kiểu "học Cloud thì bắt đầu từ đâu" nữa, mà đã biết mình cần đi từng bước: thực hành thật nhiều (Hands-on Labs), làm dự án, và chia sẻ lại.
 
-### Trải nghiệm trong event
+> Buổi Meet không chỉ mang lại khối lượng kiến thức đồ sộ về AWS hay DevOps, mà trên hết là truyền cho em động lực và một thái độ làm nghề nghiêm túc. Tinh thần "Share Back" mà các anh nhắc tới chắc chắn sẽ là kim chỉ nam cho em trong tương lai.
 
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
+#### Các hình ảnh tại event
 
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
-
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
-
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
-
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
-
-#### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
-
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+![Hình 1](/images/Event/1.jpg)
+![Hình 2](/images/Event/2.jpg)
+![Hình 3](/images/Event/3.jpg)
+![Hình 4](/images/Event/4.jpg)
+![Hình 5](/images/Event/5.jpg)
