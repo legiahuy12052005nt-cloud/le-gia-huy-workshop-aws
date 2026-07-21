@@ -1,7 +1,7 @@
 ---
 title: "Solution Architecture"
 date: 2026-07-05
-weight: 3
+weight: 2
 chapter: false
 pre: " <b> 5.2. </b> "
 ---
@@ -10,6 +10,7 @@ The system implements a flexible and comprehensive segregation of responsibility
 
 ![PhishShield Ecosystem Architecture Diagram](/images/2-Proposal/diagram.jpg)
 
+Image Diagram : https://drive.google.com/file/d/1osh2sEgYEpO4q6eBzNNVTcGM7DniHgWv/view?usp=drive_link
 #### Cloud infrastructure platform services utilized
 
 * aws waf: Web application firewall serving as the frontline validation tier to filter application-layer exploits and insulate public endpoints from malicious telemetry input.

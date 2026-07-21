@@ -41,5 +41,5 @@ pre: " <b> 7. </b> "
 
 ### Đề xuất & mong muốn
 
-* **Đề xuất cải thiện trải nghiệm:** Ban tổ chức có thể bổ sung thêm một vài buổi chuyên đề Deep-dive chuyên sâu về lộ trình bảo mật nâng cao (ví dụ: DevSecOps CI/CD Pipeline Security trên Cloud) để thỏa mãn thêm đam mê nghiên cứu ATTT của học viên.
+* **Đề xuất cải thiện trải nghiệm:** Ban tổ chức có thể bổ sung thêm một vài buổi chuyên đề Deep-dive chuyên sâu về lộ trình bảo mật nâng cao (ví dụ: DevSecOps CI/CD Pipeline Security trên Cloud) để thỏa mãn thêm đam mê nghiên cứu của học viên.
 * **Nguyện vọng tương lai:** Em rất mong muốn tiếp tục được đồng hành, đóng góp cho cộng đồng và hệ sinh thái AWS với tư cách là một Cloud Security Engineer trong tương lai.

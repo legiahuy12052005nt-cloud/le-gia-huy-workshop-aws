@@ -23,6 +23,7 @@ The system implements a flexible and comprehensive segregation of responsibility
 
 ![PhishShield Ecosystem Architecture Diagram](/images/2-Proposal/diagram.jpg)
 
+Image Diagram : https://drive.google.com/file/d/1osh2sEgYEpO4q6eBzNNVTcGM7DniHgWv/view?usp=drive_link
 * **Cloud infrastructure platform services utilized:**
   * **aws waf:** Web application firewall serving as the frontline validation tier to filter application-layer exploits and insulate public endpoints from malicious telemetry input.
   * **amazon api gateway:** Central ingestion API gateway hosting edge collection entries to safely receive url metadata strings and security logs via secure https transaction protocols.

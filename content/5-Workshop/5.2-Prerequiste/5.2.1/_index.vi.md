@@ -1,9 +1,9 @@
 ---
 title: "Lý do lựa chọn các dịch vụ hạ tầng"
 date: 2026-07-05
-weight: 2
+weight: 1
 chapter: false
-pre: " <b> 5.2.2. </b> "
+pre: " <b> 5.2.1. </b> "
 ---
 
 Để xây dựng hệ thống, chúng em ưu tiên lựa chọn các dịch vụ được quản lý hoàn toàn (managed service) theo mô hình kiến trúc thuần không máy chủ (serverless). Các lý do cụ thể bao gồm:
