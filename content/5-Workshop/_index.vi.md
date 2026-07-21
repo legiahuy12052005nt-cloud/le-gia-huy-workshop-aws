@@ -3,7 +3,7 @@ title: "Workshop"
 date: 2026-07-09
 weight: 5
 chapter: false
-pre: " <b> 5.4 </b> "
+pre: " <b> 5 </b> "
 ---
 
 # Xây dựng hệ sinh thái bảo mật đa tầng Serverless với PhishShield Ecosystem
