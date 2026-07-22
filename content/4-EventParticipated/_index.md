@@ -13,7 +13,7 @@ During my internship, I participated in specialized events. Each event was a mem
 
 &emsp;**Time:** 09:00 AM, June 13, 2026
 
-&emsp;**Location:** Online via Google Meet
+&emsp;**Location:** Số 2 đường Hải Triều , phường Bến nghé , Quận 1 , Tp.HCM , Tầng 26
 
 &emsp;**Role in the event:** Attendee
 

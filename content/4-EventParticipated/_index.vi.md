@@ -13,7 +13,7 @@ Trong quá trình thực tập, em đã tham gia các events chuyên đề, vớ
 
 &emsp;**Thời gian:** 09:00 ngày 13/06/2026
 
-&emsp;**Địa điểm:** Trực tuyến qua Google Meet
+&emsp;**Địa điểm:** Số 2 đường Hải Triều , phường Bến nghé , Quận 1 , Tp.HCM , Lầu 26 
 
 &emsp;**Vai trò trong sự kiện:** Người tham dự
 
