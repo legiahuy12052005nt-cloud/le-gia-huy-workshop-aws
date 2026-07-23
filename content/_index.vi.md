@@ -1,39 +1,39 @@
 ---
-title: "Báo cáo thực tập"
-date: 2026-07-05
+title: "Báo cáo Thực tập"
+date: 2026-07-24
 weight: 1
 chapter: false
 ---
 
-# Báo cáo thực tập
+# Báo cáo Thực tập
 
-### Thông tin sinh viên:
-&emsp; **Họ và tên:** Lê Hoàng Thanh Phú
+### Thông tin Sinh viên:
+&emsp; **Họ và tên:** Lê Gia Huy
 
-&emsp; **Số điện thoại:** 0938477136
+&emsp; **Số điện thoại:** 0935745633
 
-&emsp; **Email:** thanhphu3082k3@gmail.com
+&emsp; **Email:** legiahuy.12052005nt@gmail.com
 
-&emsp; **Trường:** Đại học Công nghệ TP.HCM (HUTECH)
+&emsp; **Trường Đại học:** Đại học Văn Lang
 
-&emsp; **Ngành:** An ninh mạng
+&emsp; **Chuyên ngành:** An ninh mạng
 
-&emsp; **Lớp:** 22DTHB6
+&emsp; **Lớp:** CNTT02
 
-&emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Việt Nam
+&emsp; **Công ty Thực tập:** Công ty TNHH Amazon Web Services Việt Nam
 
-&emsp; **Vị trí thực tập:** Workforce Bootcamp - First Cloud AI Journey
+&emsp; **Vị trí Thực tập:** Workforce Bootcamp - First Cloud AI Journey
 
-&emsp; **Thời gian thực tập:** Từ ngày 18/04/2026 đến ngày 12/07/2026
+&emsp; **Thời gian Thực tập:** Từ 18/05/2026 đến 24/07/2026
 
-![Ảnh đại diện](/images/avatar.jpg)
+<img src="/images/avatar.png">
 
-### Nội dung báo cáo
+### Nội dung Báo cáo
 
-1. [Nhật ký làm việc (Worklog)](1-Worklog/)
-2. [Đề xuất dự án (Proposal)](2-Proposal/)
-3. [Các bài blogs đã đăng](3-BlogsPosted/)
-4. [Các events đã tham gia](4-EventParticipated/)
-5. [Hội thảo công nghệ (Workshop)](5-Workshop/)
-6. [Tự đánh giá kết quả](6-Self-evaluation/)
-7. [Chia sẻ, đóng góp ý kiến](7-Feedback/)
+1. [Nhật ký Công việc (Worklog)](1-Worklog/)
+2. [Đề xuất Dự án](2-Proposal/)
+3. [Bài viết Blog](3-BlogsPosted/)
+4. [Sự kiện đã Tham gia](4-EventParticipated/)
+5. [Workshop Kỹ thuật](5-Workshop/)
+6. [Tự Đánh giá](6-Self-evaluation/)
+7. [Chia sẻ và Góp ý](7-Feedback/)

@@ -1,28 +1,25 @@
 ---
 title: "Week 1 Worklog"
-date: 2026-04-20
+date: 2026-05-18
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
 
 ### Week 1 Objectives:
-* Read, understand, and comply with the safety rules and regulations of the First Cloud AI Journey program.
-* Successfully register a personal AWS account and learn how to configure initial basic setups.
+* Establish a foundational understanding of AWS ecosystem security and compliance guidelines.
+* Provision core virtual networks (VPC) and deploy basic compute and storage resources securely.
 
 ### Weekly Tasks Details:
 
 | Day | Task Description | Start Date | End Date | Resources |
 | :--- | :--- | :---: | :---: | :--- |
-| **Mon** | - Read and carefully reviewed the internal rules and regulations of the FCAJ internship program. | 2026-04-20 | 2026-04-20 | FCAJ Internal Docs |
-| **Tue** | - Prepared a personal Visa Debit card for payment binding.<br>- Walked through the registration steps to Create a new AWS Account (Free Tier). | 2026-04-21 | 2026-04-21 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
-| **Wed** | - Completed Visa card verification and successfully logged into the AWS Console.<br>- Configured AWS Budgets to set up automatic cost alerts sent to my email. | 2026-04-22 | 2026-04-22 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
-| **Thu** | - Researched the AWS Support center workflow.<br>- Learned how to submit a technical support ticket when encountering infrastructure errors. | 2026-04-23 | 2026-04-23 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
-| **Fri** | - Studied the cloud identity management service (AWS IAM).<br>- Hands-on: Created IAM Users, assigned basic permissions, and enabled Multi-Factor Authentication (MFA) to secure the account. | 2026-04-24 | 2026-04-24 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| **Mon** | - Reviewed safety protocols for the First Cloud AI Journey program.<br>- Registered a new AWS Free Tier account with billing alerts. | 2026-05-18 | 2026-05-18 | FCAJ Internal Docs |
+| **Tue** | - Explored AWS Support features.<br>- Established foundational IAM policies, including MFA activation for root protection. | 2026-05-19 | 2026-05-19 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| **Wed** | - Architected a custom virtual network using Amazon VPC.<br>- Configured public subnets and internet routing mechanisms. | 2026-05-20 | 2026-05-20 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| **Thu** | - Provisioned Amazon EC2 instances for virtual computing.<br>- Attached IAM roles to enable password-less AWS service access. | 2026-05-21 | 2026-05-21 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| **Fri** | - Utilized AWS Cloud9 IDE for browser-based development.<br>- Successfully hosted a static HTML/CSS site using Amazon S3. | 2026-05-22 | 2026-05-22 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
 
 ### Week 1 Outcomes and Deliverables:
-
-* Account Registration: I prepared my Visa Debit card, registered, and successfully logged into the AWS Management Console without any verification issues.
-* Cost Monitoring: I learned how to use AWS Budgets to set spending limits, preventing unexpected charges if I forget to shut down lab resources.
-* Technical Support: Understood how the AWS Support portal works to contact AWS engineers whenever system assistance is needed.
-* Security Practices: Applied AWS IAM concepts to create a separate daily user account and enabled MFA to keep the Root account safe from credential leaks.
+* Successfully bootstrapped the AWS environment with strict IAM controls.
+* Gained hands-on experience in building a functional VPC and deploying EC2/S3 resources without relying on hardcoded credentials.

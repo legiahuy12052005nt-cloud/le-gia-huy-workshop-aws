@@ -6,19 +6,17 @@ chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-
-
 # Event Report: AWS Architecture, DevOps Culture & Career Journey
 
 ### Event Objectives
 
-- Learn "battle-tested" experiences from senior professionals about the working environment in multinational companies and corporations.
-- Understand the true scope of a DevOps engineer's daily work, moving beyond textbook theories.
-- Explore how to design a practical system on AWS (URL Shortener) and outline a career path from an intern to an AWS Partner.
+- Gain practical, real-world insights from industry veterans regarding the dynamics of working within multinational enterprises and large corporations.
+- Discover the actual day-to-day responsibilities of a DevOps engineer, stepping outside of conventional academic definitions.
+- Learn the process of architecting a functional AWS system (specifically a URL Shortener) and map out the professional progression from an internship role to becoming an AWS Partner.
 
 ### List of Speakers
 
-The Meet gathered highly experienced professionals in the industry:
+The workshop featured several distinguished industry experts:
 - **Mr. Dat Pham** (Data Analytics Engineer) & **Mr. Cuong Nguyen** (Process Engineer).
 - **Mr. Trong H. Truong** - DevOps Engineer @ Endava Vietnam.
 - **Mr. Dinh Trung Kien** & **Mr. Nguyen Minh Tho**.
@@ -27,52 +25,48 @@ The Meet gathered highly experienced professionals in the industry:
 ### Key Highlights
 
 #### 1. Career and Corporate Culture (Mr. Dat & Mr. Cuong)
-- An authentic perspective on the international working environment: From cross-departmental collaboration to how fresh graduates can face and overcome work pressure.
-- Combining Data Analytics and Process Engineering to solve operational issues at scale.
+- Real-world views on global workplace dynamics: Covering everything from collaborating across different teams to strategies for new graduates to manage and thrive under professional stress.
+- The integration of Data Analytics with Process Engineering to address and resolve large-scale operational challenges.
 
 #### 2. What does a DevOps Engineer really do? (Mr. Trong)
-- **Shattering the illusion:** DevOps is not just about writing CI/CD configuration scripts. It is the central troubleshooting hub for a project's "pain points," such as environment errors, server crashes, or customer complaints about system speed.
-- **Daily tasks:** On-call rotation, incident handling, supporting other teams, and notably, cost investigation—something students rarely focus on during school projects.
+- **Breaking the myth:** DevOps goes far beyond merely setting up CI/CD pipelines. It acts as the core problem-solving center for project bottlenecks, addressing environment conflicts, server downtimes, and client issues regarding system performance.
+- **Routine responsibilities:** Managing on-call shifts, resolving incidents, assisting cross-functional teams, and conducting cost analysis—a critical aspect often overlooked in academic projects.
 
 #### 3. Building a URL Shortener Service on AWS (Mr. Kien & Mr. Tho)
-- **System Design:** Deconstructing the classic link shortening problem (like Bitly) and how to deploy it on the AWS cloud.
-- **Scalability:** How the system handles traffic spikes and how to choose the right database so that retrieving links takes only a few milliseconds without bottlenecks.
+- **Architecture Design:** Breaking down the mechanics of a standard link shortener (similar to Bitly) and deploying it effectively within the AWS ecosystem.
+- **System Scalability:** Strategies for managing sudden surges in user traffic and selecting optimal databases to ensure millisecond-level link retrieval without causing system congestion.
 
 #### 4. The Journey from Student to AWS Partner (Mr. Hieu Nghi)
-- A clear 8-step roadmap for beginners: (1) Student Curiosity -> (2) First Cloud Journey -> (3) Workshop & Community -> (4) Hands-on Labs -> (5) School Projects -> (6) Portfolio -> (7) AWS Partner -> (8) Share Back.
+- A well-defined 8-stage progression for newcomers: (1) Student Curiosity -> (2) First Cloud Journey -> (3) Workshop & Community -> (4) Hands-on Labs -> (5) School Projects -> (6) Portfolio -> (7) AWS Partner -> (8) Share Back.
 
 ### What I Learned
 
 #### Technical Knowledge
-- Understood the difference between running code locally and deploying it on a Production system.
-- Learned how AWS services integrate within a Scalable architecture, and grasped the importance of system monitoring and automation.
+- Grasped the distinct differences between executing code in a local environment versus launching it into a live Production system.
+- Discovered how various AWS components work together to form a highly scalable architecture, while recognizing the critical role of automated processes and system monitoring.
 
 #### Career Mindset
-- A career isn't just about "coding well"; soft skills like communication, teamwork, and system Ownership are equally crucial.
-- Realized that I am currently at the "School Projects" stage in the 8-step roadmap and urgently need to refine my "Portfolio" to prepare for the upcoming journey.
+- Professional success requires more than just technical proficiency; soft skills such as effective communication, collaboration, and taking ownership of the system are just as vital.
+- Identified my current position at the "School Projects" phase of the 8-step roadmap, highlighting an immediate need to polish my "Portfolio" for future career advancement.
 
 ### Application to Work & Internship
 
-- **Applying DevOps to projects:** Instead of manual deployment like before, I will start writing simple CI/CD pipelines on GitHub Actions for my current internship projects.
-- **Architecture Optimization:** Applying design thinking from the "URL Shortener" problem to re-evaluate how data is stored and retrieved in my personal projects for optimal response times.
-- **Building a Portfolio:** Consolidating my labs and minor projects during the internship, carefully writing README.md files to create a polished Portfolio for job hunting, aligning with the "Share Back" spirit guided by the speakers.
+- **Integrating DevOps practices:** Shifting away from manual deployments, I plan to develop basic CI/CD pipelines using GitHub Actions for the tasks in my ongoing internship.
+- **Optimizing Architecture:** Utilizing the design principles learned from the "URL Shortener" case study to rethink data storage and retrieval methods in my personal applications, aiming for maximum speed.
+- **Developing a Portfolio:** Aggregating my practical labs and mini-projects from the internship, complete with detailed README.md documentation, to craft a professional portfolio. This also aligns with the "Share Back" philosophy advocated by the mentors.
 
 ### Event Experience
 
-Attending the Meet on **June 13, 2026**, was truly a memorable milestone in my internship. 
+Participating in this workshop on **June 13, 2026**, marked a highly memorable and impactful milestone during my internship.
 
 #### Eye-opening Lessons
-- Previously, I thought DevOps was a rather dry role focused solely on configuration code. But hearing Mr. Trong share stories about on-call shifts to save servers or debugging systems made me realize how cool and critical this position is.
+- I used to perceive DevOps as a somewhat tedious job centered around writing configuration files. However, Mr. Trong's real-life stories about jumping on-call to rescue servers and debug complex systems completely changed my perspective, showing me just how fascinating and essential this role truly is.
 
 #### Clearer Direction
-- The practical insights from Mr. Dat, Mr. Cuong, and Mr. Hieu Nghi's roadmap helped an intern like me feel less lost. I am no longer confused about "where to start with Cloud"; I now know I need to take it step by step: practice extensively (Hands-on Labs), build projects, and share knowledge.
+- The pragmatic advice from Mr. Dat and Mr. Cuong, coupled with Mr. Hieu Nghi's structured roadmap, provided much-needed clarity for an intern like myself. Rather than feeling overwhelmed about how to begin my Cloud journey, I now have a concrete plan: focus on rigorous practice (Hands-on Labs), develop robust projects, and actively share what I learn.
 
-> The Meet provided not only a massive amount of knowledge about AWS and DevOps but, more importantly, instilled in me motivation and a serious professional attitude. The "Share Back" spirit emphasized by the speakers will definitely be my guiding principle in the future.
+> This event delivered much more than just deep technical knowledge regarding AWS and DevOps; it deeply inspired me and fostered a disciplined professional mindset. The core philosophy of "Share Back" highlighted by the experts will undoubtedly serve as my guiding principle moving forward.
 
 #### Event Photos
 
-![Image 1](/images/Event/1.jpg)
-![Image 2](/images/Event/2.jpg)
-![Image 3](/images/Event/3.jpg)
-![Image 4](/images/Event/4.jpg)
-![Image 5](/images/Event/5.jpg)
+<img src="/images/Event/sukien.png" alt="Image 1">

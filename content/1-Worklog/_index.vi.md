@@ -1,26 +1,24 @@
 ---
-title: "Nhật ký công việc"
-date: 2026-07-10
+title: "Nhật ký"
+date: 2026-07-24
 weight: 1
 chapter: false
 pre: " <b> 1. </b> "
 ---
 
-Dưới đây là nhật ký ghi lại toàn bộ hành trình 12 tuần thực tập thực tế của em. Là một sinh viên chuyên ngành An ninh mạng, em đã vận dụng các kiến thức bảo mật và an toàn thông tin đã học để nghiên cứu, thiết kế và từng bước triển khai một hệ sinh thái bảo mật hoàn chỉnh trên nền tảng đám mây AWS.
+Chào mừng bạn đến với nhật ký thực tập của mình. Với tư cách là một sinh viên đam mê An toàn thông tin, tài liệu này ghi chép lại toàn bộ hành trình 10 tuần thực chiến cường độ cao, nơi mình đã vận dụng các kiến thức bảo mật để kiến trúc và triển khai một hệ sinh thái an ninh toàn diện trên nền tảng AWS.
 
-Quá trình thực tập của em được chia thành các giai đoạn phát triển cụ thể: từ củng cố nền tảng cloud và an toàn hạ tầng mạng, đến phác thảo kiến trúc hệ thống, phát triển các ứng dụng bảo mật phía client, và cuối cùng là tích hợp Generative AI để phân tích đe doạ và nhận diện các liên kết lừa đảo độc hại.
+Chương trình thực tập được chia thành các giai đoạn phát triển mang tính kế thừa: bắt đầu từ việc làm chủ nền tảng đám mây và cách ly mạng lưới, tiến tới thiết kế các vi dịch vụ (microservices) phân tán, lập trình ứng dụng bảo mật phía client, và cuối cùng là tích hợp Trí tuệ Nhân tạo Sinh tạo (GenAI) để chủ động phát hiện và vô hiệu hóa các liên kết lừa đảo tinh vi.
 
-Chi tiết tiến độ và các công việc em đã thực hiện trong 3 tháng qua như sau:
+Dưới đây là chi tiết tiến độ và các cột mốc kỹ thuật mình đã chinh phục trong 10 tuần qua:
 
-*   **Tuần 1:** [Làm quen với AWS và các nguyên tắc quản lý truy cập (IAM)](1.1-week1/)
-*   **Tuần 2:** [Triển khai hạ tầng mạng ảo AWS VPC và các chính sách bảo mật mạng](1.2-week2/)
-*   **Tuần 3:** [Khởi tạo máy chủ ảo Amazon EC2 và các giải pháp lưu trữ dữ liệu đám mây](1.3-week3/)
-*   **Tuần 4:** [Tìm hiểu và cấu hình các dịch vụ điện toán không máy chủ (Serverless)](1.4-week4/)
-*   **Tuần 5:** [Thực hành phân tích dữ liệu và thiết lập hệ thống giám sát Amazon CloudWatch](1.5-week5/)
-*   **Tuần 6:** [Nghiên cứu công nghệ đóng gói container và các nền tảng điều phối](1.6-week6/)
-*   **Tuần 7:** [Khảo sát bài toán, đề xuất giải pháp và phác thảo kiến trúc hệ sinh thái bảo mật](1.7-week7/)
-*   **Tuần 8:** [Xây dựng hạ tầng mạng cốt lõi và thiết lập luồng xử lý dữ liệu theo thời gian thực](1.8-week8/)
-*   **Tuần 9:** [Phát triển các ứng dụng bảo mật phía client (Chrome Extension & Discord Bot)](1.9-week9/)
-*   **Tuần 10:** [Xây dựng phân hệ phân tích sâu bất đồng bộ tích hợp AI Amazon Bedrock](1.10-week10/)
-*   **Tuần 11:** [Tăng cường bảo mật với AWS WAF và hoàn thiện luồng tự động hóa CI/CD](1.11-week11/)
-*   **Tuần 12:** [Kiểm thử toàn diện, đóng gói tài liệu kỹ thuật và báo cáo nghiệm thu đồ án](1.12-week12/)
+*   **Tuần 1:** [Nền tảng Đám mây & Hạ tầng Mạng Cốt lõi](1.1-week1/)
+*   **Tuần 2:** [Vận hành Cơ sở dữ liệu & Tự động mở rộng](1.2-week2/)
+*   **Tuần 3:** [Bảo mật Cấp Doanh nghiệp & Cấu trúc Mạng](1.3-week3/)
+*   **Tuần 4:** [Điện toán Không máy chủ & Microservices](1.4-week4/)
+*   **Tuần 5:** [Khởi động Đồ án & Phác thảo Kiến trúc](1.5-week5/)
+*   **Tuần 6:** [Hệ thống Xử lý Mối đe dọa Thời gian thực](1.6-week6/)
+*   **Tuần 7:** [Công cụ Bảo vệ phía Người dùng Cuối (Extension & Bot)](1.7-week7/)
+*   **Tuần 8:** [Phân tích Chuyên sâu bằng Trí tuệ Nhân tạo](1.8-week8/)
+*   **Tuần 9:** [Củng cố Bảo mật & Tự động hoá CI/CD](1.9-week9/)
+*   **Tuần 10:** [Đóng gói Tài liệu & Nghiệm thu Đồ án](1.10-week10/)

@@ -1,6 +1,6 @@
 ---
 title: "Internship Report"
-date: 2026-07-05
+date: 2026-07-24
 weight: 1
 chapter: false
 ---
@@ -8,25 +8,25 @@ chapter: false
 # Internship Report
 
 ### Student Information:
-&emsp; **Full Name:** Le Hoang Thanh Phu
+&emsp; **Full Name:** Le Gia Huy
 
-&emsp; **Phone Number:** 0938477136
+&emsp; **Phone Number:** 0935745633
 
-&emsp; **Email:** thanhphu3082k3@gmail.com
+&emsp; **Email:** legiahuy.12052005nt@gmail.com
 
-&emsp; **University:** Ho Chi Minh City University of Technology (HUTECH)
+&emsp; **University:** Van Lang University
 
 &emsp; **Major:** Cybersecurity
 
-&emsp; **Class:** 22DTHB6
+&emsp; **Class:** CNTT02
 
 &emsp; **Internship Company:** Amazon Web Services Vietnam Company Limited
 
 &emsp; **Internship Position:** Workforce Bootcamp - First Cloud AI Journey
 
-&emsp; **Internship Duration:** From April 18, 2026 to July 12, 2026
+&emsp; **Internship Duration:** From May 18, 2026 to July 24, 2026
 
-![Profile Picture](/images/avatar.jpg)
+<img src="/images/avatar.png">
 
 ### Report Content
 

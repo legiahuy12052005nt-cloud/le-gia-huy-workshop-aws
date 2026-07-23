@@ -1,34 +1,33 @@
 ---
 title: "Self-Assessment"
-date: 2026-07-05
+date: 2026-07-23
 weight: 6
 chapter: false
 pre: " <b> 6. </b> "
 ---
+During my internship at **Amazon Web Services Vietnam** from **April 18 to July 12, 2026**, I had the incredible opportunity to bridge the gap between academic theory and real-world practice. This experience allowed me to transform my foundational cybersecurity knowledge into production-ready engineering solutions within a world-class cloud ecosystem.
 
-During my internship and intensive training at **Amazon Web Services Vietnam** from **April 18, 2026**, to **July 12, 2026**, I gained the invaluable opportunity to acquire, practice, and transform my academic cybersecurity foundation into production-ready engineering solutions within a world-class cloud ecosystem.
+As a participant in the **First Cloud AI Journey (Workforce Bootcamp)**, I actively contributed to designing and developing the **PhishShield Ecosystem**—a proactive defense project against social engineering and infostealers. This capstone project significantly leveled up my technical skill set. I gained hands-on experience building secure serverless architectures on AWS (using Lambda, DynamoDB, and API Gateway), programming client-edge proxies (Chrome Extension Manifest V3), automating pipeline audits with a custom Discord Bot, and working with real-time threat modeling and DOM manipulation.
 
-Participating in the **First Cloud AI Journey (Workforce Bootcamp)**, I took an active role in designing and developing the **PhishShield Ecosystem** (a Proactive Social Engineering & Infostealer Defense project). Through this capstone milestone, I significantly elevated my core professional competencies, including secure serverless architecture implementation on AWS (Lambda, DynamoDB, API Gateway), client-edge proxy programming (Chrome Extension Manifest V3), automated pipeline auditing via a custom Discord Bot, as well as real-time threat modeling and DOM manipulation matrices.
-
-To objectively reflect upon my engineering growth during this period, I evaluate my performance based on the following standardized criteria:
+To objectively reflect on my professional growth during this period, I evaluate my performance based on the following criteria:
 
 | No. | Criteria | Description | Good | Fair | Average |
 | :--- | :--- | :--- | :---: | :---: | :---: |
-| 1 | **Professional knowledge & skills** | Mastery of Cybersecurity fundamentals, proficiency with AWS services and development tools, delivering secure code quality. | ✅ | ☐ | ☐ |
-| 2 | **Ability to learn** | Agility in absorbing advanced Cloud/AI paradigms and aligning with global threat intelligence frameworks. | ☐ | ✅ | ☐ |
-| 3 | **Proactiveness** | Demonstrating a strong sense of Ownership, driving technical deep-dives, and resolving architectural issues independently. | ✅ | ☐ | ☐ |
-| 4 | **Sense of responsibility** | Strict commitment to project milestones, ensuring robust quality and stability of delivered components. | ✅ | ☐ | ☐ |
-| 5 | **Discipline & Time management** | Adherence to the intensive bootcamp schedules, corporate policies, and agile development sprint timelines. | ☐ | ☐ | ✅ |
-| 6 | **Progressive mindset** | Actively seeking and constructively integrating technical feedback from senior Solutions Architect mentors. | ☐ | ✅ | ☐ |
-| 7 | **Communication & Presentation** | Ability to articulate complex cloud infrastructure setups and deliver concise technical progress reports. | ☐ | ✅ | ☐ |
-| 8 | **Teamwork** | Collaborative integration with team members, efficiently resolving merge conflicts, and distributing agile tasks. | ✅ | ☐ | ☐ |
-| 9 | **Professional conduct** | Upholding corporate ethics, safeguarding confidential project data, and maintaining professional workplace relationships. | ✅ | ☐ | ☐ |
-| 10 | **Problem-solving skills** | Rapid system troubleshooting, root-cause identification, and designing creative, secure edge-routing workarounds. | ☐ | ✅ | ☐ |
-| 11 | **Contribution to project/team** | Delivery of core operational modules to the PhishShield monorepo, recognized by peers for high code execution. | ✅ | ☐ | ☐ |
-| 12 | **Overall** | Comprehensive evaluation of personal and professional adaptation throughout the intensive hands-on bootcamp. | ✅ | ☐ | ☐ |
+| 1 | **Professional knowledge & skills** | Solid grasp of Cybersecurity fundamentals and AWS tools, consistently delivering secure, high-quality code. | ✅ | ☐ | ☐ |
+| 2 | **Ability to learn** | Quick to absorb advanced Cloud/AI concepts and align them with global threat intelligence frameworks. | ☐ | ✅ | ☐ |
+| 3 | **Proactiveness** | Demonstrated strong ownership, diving deep into technical issues and independently resolving architectural challenges. | ✅ | ☐ | ☐ |
+| 4 | **Sense of responsibility** | Strictly adhered to project milestones, ensuring the stability and quality of the final product. | ✅ | ☐ | ☐ |
+| 5 | **Discipline & Time management** | Maintained pace with the intensive bootcamp schedule, corporate policies, and Agile sprints. | ☐ | ☐ | ✅ |
+| 6 | **Progressive mindset** | Actively sought out and applied constructive feedback from senior Solutions Architects. | ☐ | ✅ | ☐ |
+| 7 | **Communication & Presentation** | Effectively explained complex cloud architectures and delivered clear technical progress updates. | ☐ | ✅ | ☐ |
+| 8 | **Teamwork** | Collaborated smoothly with the team, resolving merge conflicts and distributing tasks efficiently. | ✅ | ☐ | ☐ |
+| 9 | **Professional conduct** | Upheld corporate ethics, protected confidential data, and maintained great relationships with colleagues. | ✅ | ☐ | ☐ |
+| 10 | **Problem-solving skills** | Quick to troubleshoot and find root causes, designing creative and secure workarounds. | ☐ | ✅ | ☐ |
+| 11 | **Contribution to project/team** | Successfully delivered core modules for the PhishShield project, earning recognition from peers for code quality. | ✅ | ☐ | ☐ |
+| 12 | **Overall** | Adapted very well to the demanding, hands-on professional environment throughout the bootcamp. | ✅ | ☐ | ☐ |
 
 ### Areas for Continuous Improvement
 
-* **Optimize Discipline and Time Management:** Refine personal workflow structures to better balance the demanding capstone engineering deliverables of the AWS bootcamp alongside academic responsibilities at HUTECH, ensuring full compliance with enterprise-level schedules and deadlines.
-* **Deepen Advanced Problem-Solving Architecture:** Continue researching sophisticated browser-level attack vectors and Zero-Trust mitigation matrices to implement automated security solutions that encompass wider system failure modes.
-* **Enhance Technical Communication Precision:** Actively practice translating intricate Cloud Security concepts into sharp, business-oriented English, maximizing impact and clarity when presenting to global engineering panels and stakeholders.
+* **Improve Time Management:** Better balance my time between the intensive demands of the AWS bootcamp and my academic coursework at **Van Lang University**, ensuring I meet all professional deadlines without compromising my studies.
+* **Enhance Architectural Problem-Solving:** Continue diving deeper into advanced browser-level attack vectors and Zero-Trust security models. My goal is to build automated security solutions capable of handling a wider range of edge cases and system failures.
+* **Sharpen Technical Communication:** Practice explaining complex Cloud Security concepts in clear, business-friendly English. I want to improve my ability to present technical ideas concisely and confidently to both engineers and stakeholders.

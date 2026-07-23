@@ -1,35 +1,25 @@
 ---
-title: "Worklog Week 9"
-date: 2026-06-15
+title: "Week 9 Worklog"
+date: 2026-07-13
 weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
 
 ### Week 9 Objectives:
+* Fortify API entry points and securely manage application secrets.
+* Automate code deployment workflows and rigorously audit infrastructure permissions.
 
-* Build and develop client edge application components including a browser extension and a social media monitoring bot.
-* Establish secure connections from client applications to the real-time processing system via the api gateway deployed last week.
-* Finalize the user warning interface and the logic for intercepting and retracting messages containing malicious links.
+### Weekly Tasks Details:
 
----
+| Day | Task Description | Start Date | End Date | Resources |
+| :--- | :--- | :---: | :---: | :--- |
+| **Mon** | - Bound AWS WAF rules to API Gateway, implementing strict rate limits to mitigate Layer 7 DDoS and spam attacks. | 2026-07-13 | 2026-07-13 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| **Tue** | - Migrated plaintext credentials and Bot Tokens into AWS Secrets Manager, scrubbing hardcoded secrets from repositories. | 2026-07-14 | 2026-07-14 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| **Wed** | - Orchestrated a robust CI/CD pipeline leveraging GitHub Actions and AWS SAM for frictionless cloud deployments. | 2026-07-15 | 2026-07-15 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| **Thu** | - Conducted a system-wide IAM audit, aggressively trimming over-privileged roles to enforce absolute least-privilege standards. | 2026-07-16 | 2026-07-16 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| **Fri** | - Executed a comprehensive security architecture review while identifying optimization vectors to minimize ongoing AWS costs. | 2026-07-17 | 2026-07-17 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
 
-### Tasks to be Deployed This Week:
-
-| Day | Task | Start Date | End Date | Resource Links |
-| --- | --- | --- | --- | --- |
-| 2 | - Initialize the chrome extension project structure, set up the manifest.json configuration file to grant tab access and intercept navigation flows <br> - Design the warning.html alert page interface using html and css | 15/06/2026 | 15/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 3 | - Program the javascript source code for the background script to listen to user url access events <br> - Write the api call function to push link data to amazon api gateway and handle the logic of redirecting to the warning page if a risky result is received | 16/06/2026 | 16/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - Register and initialize the discord bot application on the developer portal, configure necessary oauth2 privileges and scopes (such as reading and managing messages) <br> - Initialize the nodejs programming environment and install connection libraries | 17/06/2026 | 17/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 5 | - Program the logic for the discord bot using regular expressions (regex) to extract urls from chat channel message segments <br> - Integrate the url checking api call and execute the immediate message deletion command if data-leaking malware is detected | 18/06/2026 | 18/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 6 | - Perform end-to-end testing across both browser and messaging application environments <br> - Thoroughly resolve errors related to cors cross-origin policies, optimize api response latency, and package the source code | 19/06/2026 | 19/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
-
----
-
-### Week 9 Achievements:
-
-* Successfully developed the core of the chrome extension with the ability to directly intervene in the web browsing flow, identifying and blocking suspicious accesses before the webpage can load actual content.
-* Built an intuitive warning.html page interface, clearly explaining the reasons the system initiated the interception and providing a reference identifier for the end user.
-* Successfully operationalized the discord bot on a test server; the bot is capable of automatically scanning bulk messages in real time and extracting urls with high accuracy using regex tools.
-* Synchronously integrated both edge application flows with the amazon api gateway analysis center; completely resolved cors security barriers to ensure seamless bidirectional data transmission.
-* Validated and completed the multi-platform automated defense scenario: the extension successfully redirects malicious browser traffic, while the social network bot triggers administrative privileges to revoke and permanently delete messages containing phishing links within milliseconds.
+### Week 9 Outcomes and Deliverables:
+* Completely hardened the application perimeter and eradicated credential leakage risks.
+* Streamlined development by reducing manual deployment time to mere minutes through GitOps methodologies.

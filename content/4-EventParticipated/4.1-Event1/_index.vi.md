@@ -1,77 +1,72 @@
 ---
-title: "Workshop: Kiến trúc AWS, Văn hóa DevOps & Định hướng Phát triển Sự nghiệp"
+title: "Workshop: Kiến trúc AWS, Văn hóa DevOps & Hành trình Sự nghiệp"
 date: 2026-06-13
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
+# Báo cáo Sự kiện: Kiến trúc AWS, Văn hóa DevOps & Hành trình Sự nghiệp
 
-# Bài thu hoạch: Kiến trúc AWS, Văn hóa DevOps & Hành trình sự nghiệp 
+### Mục tiêu Sự kiện
 
-### Mục Đích Của Sự Kiện
+- Lắng nghe những kinh nghiệm "thực chiến" từ các anh/chị đi trước về môi trường làm việc tại các công ty đa quốc gia và tập đoàn lớn.
+- Hiểu rõ công việc thực tế hàng ngày của một kỹ sư DevOps là gì, thoát khỏi những định nghĩa lý thuyết khô khan.
+- Học cách thiết kế một hệ thống thực tế trên AWS (cụ thể là bài toán Rút gọn Link - URL Shortener) và vạch ra lộ trình phát triển sự nghiệp từ một thực tập sinh cho đến khi trở thành AWS Partner.
 
-- Học hỏi kinh nghiệm "thực chiến" từ các anh đi trước về môi trường làm việc tại các công ty, tập đoàn đa quốc gia.
-- Hiểu đúng và đủ về công việc thực sự của một kỹ sư DevOps, thoát khỏi những lý thuyết sách vở.
-- Tiếp cận cách thiết kế một hệ thống thực tế trên AWS (URL Shortener) và vạch ra lộ trình phát triển từ sinh viên thực tập đến chuyên gia (AWS Partner).
+### Danh sách Diễn giả
 
-### Danh Sách Diễn Giả
-
-Buổi Meet quy tụ các anh có rất nhiều kinh nghiệm trong ngành:
+Sự kiện có sự góp mặt của các chuyên gia giàu kinh nghiệm trong ngành:
 - **Anh Đạt Phạm** (Data Analytics Engineer) & **Anh Cường Nguyễn** (Process Engineer).
-- **Anh Hoàng Trọng** - DevOps Engineer @ Endava Vietnam.
+- **Anh Trọng H. Trương** - DevOps Engineer @ Endava Vietnam.
 - **Anh Đinh Trung Kiên** & **Anh Nguyễn Minh Thọ**.
 - **Anh Danh Hoàng Hiếu Nghị** - AI Engineer, AWS Community Builder.
 
-### Nội Dung Nổi Bật
+### Những Điểm Nhấn Chính
 
-#### 1. Chuyện nghề, chuyện công ty (Anh Đạt & Anh Cường)
-- Góc nhìn chân thực về môi trường làm việc quốc tế: Từ quy trình phối hợp giữa các phòng ban đến cách sinh viên mới ra trường đối mặt và vượt qua áp lực công việc.
-- Bài toán kết hợp giữa xử lý dữ liệu (Data Analytics) và tối ưu quy trình (Process Engineering) để giải quyết các vấn đề vận hành ở quy mô lớn.
+#### 1. Sự nghiệp và Văn hóa Doanh nghiệp (Anh Đạt & Anh Cường)
+- Góc nhìn chân thực về môi trường làm việc quốc tế: Từ cách phối hợp giữa các phòng ban khác nhau cho đến chiến lược để sinh viên mới ra trường đối mặt và vượt qua áp lực công việc.
+- Sự kết hợp giữa Data Analytics (Phân tích dữ liệu) và Process Engineering (Kỹ thuật quy trình) để giải quyết các vấn đề vận hành ở quy mô lớn.
 
-#### 2. Kỹ sư DevOps thực sự làm gì? (Anh Hoàng Trọng)
-- **Vỡ mộng lý thuyết:** DevOps không chỉ là việc ngồi viết script cấu hình CI/CD. Đó là trung tâm gỡ rối xử lý muôn vàn "nỗi đau" của dự án như lỗi môi trường, server sập, hay phàn nàn của khách hàng về tốc độ hệ thống.
-- **Công việc thực tế hàng ngày:** Trực hệ thống (On-call), xử lý sự cố (Incident handling), hỗ trợ các team khác và đặc biệt là bài toán kiểm soát chi phí (Cost investigation) – điều mà lúc làm đồ án ở trường sinh viên ít khi để ý tới.
+#### 2. Kỹ sư DevOps thực sự làm gì? (Anh Trọng)
+- **Phá vỡ lầm tưởng:** DevOps không chỉ đơn thuần là viết vài dòng script cấu hình CI/CD. Đây là trung tâm giải quyết các "nút thắt" của dự án, xử lý lỗi môi trường, sập server hay những phàn nàn của khách hàng về tốc độ hệ thống.
+- **Công việc thường ngày:** Trực on-call, xử lý sự cố (incident), hỗ trợ các team khác và đặc biệt là điều tra tối ưu chi phí - một yếu tố cực kỳ quan trọng mà sinh viên ít khi để ý khi làm đồ án trên trường.
 
 #### 3. Xây dựng dịch vụ URL Shortener trên AWS (Anh Kiên & Anh Thọ)
-- **Thiết kế kiến trúc (System Design):** Mổ xẻ bài toán rút gọn link kinh điển (giống Bitly) và cách đưa nó lên đám mây AWS.
-- **Khả năng mở rộng (Scalability):** Cách hệ thống chịu tải khi lượng truy cập tăng vọt, lựa chọn database phù hợp để việc truy xuất link chỉ mất vài mili-giây mà không bị nghẽn (bottleneck).
+- **Thiết kế hệ thống (Architecture Design):** Mổ xẻ bài toán rút gọn link kinh điển (giống Bitly) và cách triển khai nó hiệu quả trên nền tảng điện toán đám mây AWS.
+- **Khả năng mở rộng (Scalability):** Cách hệ thống chịu tải khi lượng truy cập tăng đột biến và cách chọn đúng cơ sở dữ liệu để tốc độ truy xuất link chỉ mất vài mili-giây mà không bị nghẽn.
 
-#### 4. Hành trình từ sinh viên đến AWS Partner (Anh Hiếu Nghị)
-- Lộ trình 8 bước rất rõ ràng cho người mới: (1) Bắt đầu từ sự tò mò -> (2) Tìm hiểu Cloud -> (3) Tham gia cộng đồng -> (4) Thực hành Labs -> (5) Làm dự án -> (6) Xây Portfolio -> (7) AWS Partner -> (8) Trở lại đóng góp cho cộng đồng (Share Back).
+#### 4. Hành trình từ Sinh viên đến AWS Partner (Anh Hiếu Nghị)
+- Lộ trình 8 bước rõ ràng cho người mới bắt đầu: (1) Sinh viên tò mò -> (2) Bước đầu tiếp cận Cloud -> (3) Tham gia Workshop & Cộng đồng -> (4) Thực hành (Hands-on Labs) -> (5) Đồ án môn học -> (6) Xây dựng Portfolio -> (7) AWS Partner -> (8) Chia sẻ lại (Share Back).
 
-### Những Gì Học Được
+### Những Gì Tôi Học Được
 
-#### Về Kiến thức Kỹ thuật
-- Hiểu được sự khác biệt giữa code chạy trên máy tính cá nhân (local) và code chạy trên hệ thống Production.
-- Biết cách các dịch vụ của AWS liên kết với nhau trong một kiến trúc Scalable, hiểu được tầm quan trọng của việc giám sát hệ thống và tự động hóa.
+#### Kiến thức Chuyên môn
+- Hiểu rõ sự khác biệt một trời một vực giữa việc chạy code trên máy cá nhân (local) so với khi triển khai lên hệ thống thực tế (Production).
+- Biết được cách các dịch vụ AWS liên kết với nhau trong một kiến trúc có khả năng mở rộng cao, đồng thời nhận ra tầm quan trọng của việc tự động hóa và giám sát hệ thống (monitoring).
 
-#### Về Tư duy Nghề nghiệp
-- Sự nghiệp không chỉ có mỗi việc "code giỏi", mà kỹ năng giao tiếp, làm việc nhóm, và trách nhiệm với hệ thống (Ownership) quan trọng không kém.
-- Nhận ra bản thân đang ở giai đoạn "School Projects" trong lộ trình 8 bước và cần phải gấp rút hoàn thiện "Portfolio" để chuẩn bị cho hành trình sắp tới.
+#### Tư duy Nghề nghiệp
+- Thành công trong công việc không chỉ nhờ "code giỏi"; các kỹ năng mềm như giao tiếp, làm việc nhóm và tinh thần làm chủ hệ thống (Ownership) cũng quan trọng không kém.
+- Nhận ra bản thân đang ở giai đoạn "Đồ án môn học" trong lộ trình 8 bước, và thấy được sự cần thiết phải gấp rút hoàn thiện "Portfolio" để chuẩn bị cho hành trình sắp tới.
 
-### Ứng Dụng Vào Công Việc & Thực Tập
+### Áp dụng vào Công việc & Kỳ thực tập
 
-- **Áp dụng DevOps vào đồ án:** Thay vì deploy thủ công như trước, em sẽ bắt đầu tập viết các đường ống CI/CD đơn giản trên GitHub Actions cho các project thực tập hiện tại.
-- **Tối ưu kiến trúc:** Ứng dụng tư duy thiết kế từ bài toán "URL Shortener" để xem xét lại cách lưu trữ và truy xuất dữ liệu trong đồ án cá nhân sao cho tối ưu thời gian phản hồi nhất.
-- **Xây dựng Portfolio:** Gom nhặt lại các bài lab, các project nhỏ lẻ trong quá trình thực tập, viết file README.md thật cẩn thận để làm một Portfolio chỉn chu đi xin việc, đúng với tinh thần các anh đã định hướng.
+- **Áp dụng DevOps vào dự án:** Thay vì deploy thủ công như trước, tôi sẽ bắt đầu viết các pipeline CI/CD đơn giản trên GitHub Actions cho các công việc thực tập hiện tại.
+- **Tối ưu kiến trúc:** Vận dụng tư duy thiết kế từ bài toán "URL Shortener" để đánh giá lại cách lưu trữ và truy xuất dữ liệu trong các dự án cá nhân nhằm đạt tốc độ phản hồi tối ưu.
+- **Xây dựng Portfolio:** Tổng hợp lại các bài lab và dự án nhỏ trong quá trình thực tập, trau chuốt lại các file README.md để tạo ra một Portfolio chuyên nghiệp khi xin việc, đúng với tinh thần "Share Back" mà các anh định hướng.
 
-### Trải nghiệm trong sự kiện
+### Trải nghiệm Sự kiện
 
-Tham gia buổi Meet vào ngày **13/06/2026** thực sự là một cột mốc đáng nhớ trong quá trình thực tập của em. 
+Việc tham dự buổi Workshop vào ngày **13/06/2026** thực sự là một cột mốc đáng nhớ và mang lại nhiều tác động tích cực trong kỳ thực tập của tôi.
 
-#### Những bài học "giải ngố"
-- Trước đây, em thường nghĩ DevOps là một vị trí khá khô khan và chỉ toàn code cấu hình. Nhưng nghe anh Trọng chia sẻ về những ca trực on-call cứu server hay những lần đi gỡ lỗi hệ thống mới thấy vị trí này ngầu và quan trọng đến mức nào. 
+#### Những bài học mở mang tầm mắt
+- Trước đây, tôi cứ nghĩ DevOps là một công việc khá khô khan, chỉ xoay quanh mấy file code cấu hình. Nhưng khi nghe anh Trọng kể những câu chuyện thực tế về việc nhảy vào trực on-call "cứu" server hay debug hệ thống phức tạp, tôi mới thấy vị trí này thực sự rất "ngầu" và quan trọng.
 
 #### Định hướng rõ ràng hơn
-- Những chia sẻ thực tế từ anh Đạt, anh Cường và lộ trình của anh Hiếu Nghị giúp một sinh viên thực tập như em bớt đi sự chênh vênh. Em không còn hoang mang kiểu "học Cloud thì bắt đầu từ đâu" nữa, mà đã biết mình cần đi từng bước: thực hành thật nhiều (Hands-on Labs), làm dự án, và chia sẻ lại.
+- Những lời khuyên thực dụng từ anh Đạt, anh Cường và lộ trình bài bản của anh Hiếu Nghị đã giúp một thực tập sinh như tôi bớt đi sự chông chênh. Tôi không còn hoang mang về việc "bắt đầu với Cloud từ đâu" nữa, giờ đây tôi đã có một kế hoạch cụ thể: tập trung thực hành thật nhiều (Hands-on Labs), xây dựng các dự án vững chắc và tích cực chia sẻ kiến thức.
 
-> Buổi Meet không chỉ mang lại khối lượng kiến thức đồ sộ về AWS hay DevOps, mà trên hết là truyền cho em động lực và một thái độ làm nghề nghiêm túc. Tinh thần "Share Back" mà các anh nhắc tới chắc chắn sẽ là kim chỉ nam cho em trong tương lai.
+> Sự kiện này không chỉ mang đến một lượng lớn kiến thức chuyên sâu về AWS và DevOps, mà quan trọng hơn cả, nó đã truyền cho tôi động lực và một thái độ nghề nghiệp nghiêm túc. Tinh thần "Share Back" (Chia sẻ lại) mà các chuyên gia nhấn mạnh chắc chắn sẽ là kim chỉ nam của tôi trong thời gian tới.
 
-#### Các hình ảnh tại event
+#### Hình ảnh Sự kiện
 
-![Hình 1](/images/Event/1.jpg)
-![Hình 2](/images/Event/2.jpg)
-![Hình 3](/images/Event/3.jpg)
-![Hình 4](/images/Event/4.jpg)
-![Hình 5](/images/Event/5.jpg)
+<img src="/images/Event/sukien.png" alt="Image 1">

@@ -1,35 +1,25 @@
 ---
-title: "Worklog Week 10"
-date: 2026-06-22
+title: "Week 10 Worklog"
+date: 2026-07-20
 weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
 
 ### Week 10 Objectives:
+* Finalize ecosystem testing and package all technical manuals.
+* Prepare demonstration environments and summarize the internship outcomes.
 
-* Build a cluster of background processing servers to conduct deep analysis of links that have never appeared in the database.
-* Integrate cloud artificial intelligence platforms to comprehend webpage content, identifying sophisticated phishing tactics and zero-day threats.
-* Establish a pipeline to store analysis results and system logs into a centralized data lake for future reporting and model training purposes.
+### Weekly Tasks Details:
 
----
+| Day | Task Description | Start Date | End Date | Resources |
+| :--- | :--- | :---: | :---: | :--- |
+| **Mon** | - Executed final holistic validation runs, extracting statistical success metrics directly from cloud telemetry platforms. | 2026-07-20 | 2026-07-20 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| **Tue** | - Authored thorough deployment manuals, compiling architectural nuances and configuration parameters into a unified documentation suite. | 2026-07-21 | 2026-07-21 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| **Wed** | - Prepared presentation materials and staged the live demo environments for both the Browser Extension and Discord integrations. | 2026-07-22 | 2026-07-22 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| **Thu** | - Cleansed the cloud environment of stray test resources and pushed the pristine final release branch to GitHub. | 2026-07-23 | 2026-07-23 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| **Fri** | - Delivered the concluding project presentation, executed a successful live demo, and officially transferred all assets. | 2026-07-24 | 2026-07-24 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
 
-### Tasks to be Deployed This Week:
-
-| Day | Task | Start Date | End Date | Resource Links |
-| --- | --- | --- | --- | --- |
-| 2 | - Deploy a worker nodes compute cluster using amazon ec2 combined with an auto scaling group <br> - Configure an application load balancer to evenly distribute background analysis tasks from the system | 22/06/2026 | 22/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 3 | - Research and establish the generative artificial intelligence subsystem via the amazon bedrock service <br> - Build optimal prompt engineering templates to direct large language models (llm) in analyzing phishing indicators from webpage source code and text | 23/06/2026 | 23/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - Write web scraping scripts on amazon ec2 servers to automatically access, capture, and extract content from suspicious urls <br> - Integrate the sdk to send the newly collected raw data to amazon bedrock for risk level evaluation | 24/06/2026 | 24/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 5 | - Configure the persistent storage flow: Push all analysis result payloads and raw json logs into the data lake on amazon s3 <br> - Program the reverse update mechanism: Automatically write new malware detection results back into the blacklist table on amazon dynamodb | 25/06/2026 | 25/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 6 | - Conduct load testing and verify the integrity of the asynchronous processing flow <br> - Monitor system telemetry parameters, optimize caching, and fine-tune timeout settings to prevent process hangs | 26/06/2026 | 26/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
-
----
-
-### Week 10 Achievements:
-
-* Successfully deployed a flexible compute infrastructure with amazon ec2 and application load balancer, ensuring the system can automatically scale processing resources smoothly during sudden spikes in suspicious link traffic.
-* Effectively leveraged the ai power of the amazon bedrock platform; the artificial intelligence model is now capable of comprehending webpage structures, accurately identifying fake banking interfaces or credential-stealing login forms without relying on static blacklists.
-* Perfected safe web scraping execution scripts within an isolated server environment, eliminating the risk of reverse malware infection from malicious websites to the core server system.
-* Successfully established a closed-loop data cycle: the system automatically pushes analysis evidence into the amazon s3 cold storage repository as audit resources, while simultaneously updating new malicious urls into amazon dynamodb to protect massive numbers of other users in real time.
-* Measured and validated that the asynchronous workflow operates flawlessly; deep analysis tasks running in the backend (taking 3-5 seconds) cause absolutely no impact on the high-speed web browsing experience of users at the edge layer.
+### Week 10 Outcomes and Deliverables:
+* Concluded the 10-week journey by delivering a flawless, fully operational security product.
+* Accumulated significant practical proficiency in architecting scalable, AI-enhanced, and heavily fortified cloud infrastructures.
