@@ -1,5 +1,4 @@
-baseURL = "https://le-gia-huy-workshop-aws.vercel.app/"
-author = "Lê Gia Huy"
+baseURL = "https://le-hoang-thanh-phu-workshop-aws-rzw.vercel.app/"
 relativeURLs = false
 canonifyURLs = false
 defaultContentLanguage = "en"
@@ -17,7 +16,7 @@ home = [ "HTML", "RSS", "JSON"]
   # Git hub repo link
   editURL = ""
   description = ""
-  author = "Lê Gia Huy"
+  author = "Lê Hoàng Thanh Phú"
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false
@@ -61,7 +60,3 @@ weight = 20
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-[module]
-  [module.hugoVersion]
-    extended = true
-    min = "0.164.0"
